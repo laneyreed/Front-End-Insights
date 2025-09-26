@@ -4,7 +4,8 @@
     width: 100%;
     min-height: 30vh;
     background: #45855D;
-    background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, rgba(61, 173, 111, 1) 50%, rgba(69, 133, 93, 1) 100%);
+    /* background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, rgba(61, 173, 111, 1) 50%,  #34495e 100%); */
+    background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,9 +22,9 @@
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(48, 45, 204, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(48, 45, 204, 0.3) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, #34495e 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(69, 133, 93, 1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, #34495e 0%, transparent 50%);
     animation: backgroundShift 20s ease-in-out infinite alternate;
 }
 
@@ -97,6 +98,9 @@
     }
 }
 
+
+
+/* Accessibility improvements */
 /* High contrast mode support */
 @media (prefers-contrast: high) {
     .hero-banner {

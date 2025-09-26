@@ -2,7 +2,7 @@
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 /* Main Content */
@@ -42,7 +42,7 @@
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 4rem;
+    gap: 5rem;
     margin-top: 2rem;
 }
 
@@ -87,7 +87,7 @@
 .card-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, rgba(69, 133, 93, 1), rgba(61, 173, 111, 1));
+    background: linear-gradient(205deg, rgba(69, 133, 93, 1), #34495e);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -139,4 +139,46 @@
 
 .card-link:hover::after {
     transform: translateX(4px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .cards-section {
+        padding: 3rem 0;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+
+}
+
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-icon,
+    .card-link::after,
+    .social-link {
+        transition: none;
+    }
+    
+    .card:hover {
+        transform: none;
+    }
+    
+    .card:hover .card-icon {
+        transform: none;
+    }
 }

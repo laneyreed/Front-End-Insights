@@ -1,5 +1,6 @@
 @import url('./home-banner.css');
 @import url('./home-cards.css');
+@import url('./footer.css');
 
 *{
     box-sizing: border-box;

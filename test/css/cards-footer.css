@@ -286,20 +286,3 @@
     }
 }
 
-/* Accessibility improvements */
-@media (prefers-reduced-motion: reduce) {
-    .card,
-    .card-icon,
-    .card-link::after,
-    .social-link {
-        transition: none;
-    }
-    
-    .card:hover {
-        transform: none;
-    }
-    
-    .card:hover .card-icon {
-        transform: none;
-    }
-}
