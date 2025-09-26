@@ -1,0 +1,122 @@
+/* Banner Styles */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    min-height: 30vh;
+    background: #45855D;
+    background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, rgba(61, 173, 111, 1) 50%, rgba(69, 133, 93, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* animated background pattern */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(48, 45, 204, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(48, 45, 204, 0.3) 0%, transparent 50%);
+    animation: backgroundShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+    0% { transform: translateX(-10px) translateY(-10px); }
+    100% { transform: translateX(10px) translateY(10px); }
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    color: white;
+}
+
+.banner-headline {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.02em;
+    animation: fadeInUp 1s ease-out;
+}
+
+.banner-subheadline {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* headline and subheadline animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 50vh;
+        padding: 1.5rem;
+    }
+    
+    .banner-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        min-height: 40vh;
+        padding: 1rem;
+    }
+    
+    .banner-headline {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .hero-banner {
+        background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    }
+    
+    .banner-headline,
+    .banner-subheadline {
+        text-shadow: none;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .hero-banner::before {
+        animation: none;
+    }
+    
+    .banner-headline,
+    .banner-subheadline {
+        animation: none;
+    }
+}
