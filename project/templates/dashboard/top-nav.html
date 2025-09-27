@@ -1,0 +1,42 @@
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <i class="fas fa-chart-line"></i>
+            <span>{{ dashboard_title }}</span>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link active" data-section="analytics">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>{{nav_item1}}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-section="projects">
+                    <i class="fas fa-folder"></i>
+                    <span>{{nav_item2}}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-section="users">
+                    <i class="fas fa-users"></i>
+                    <span>{{nav_item3}}</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="nav-profile">
+            <div class="profile-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-info">
+                <span class="profile-name">
+                    <a href="{{ url_for('home') }}">FronEnd Insights</a>
+                </span>
+                <span class="profile-role">Admin</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>

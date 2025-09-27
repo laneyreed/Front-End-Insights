@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontEnd Insights</title>
+    <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
     {% block header %}
-
+        {% include 'dashboard/top-nav.html' %}
     {% endblock header %}
 
     
-    {% block home_main %}
+    {% block main %}
     
     
-    {% endblock home_main %}
+    {% endblock main %}
 
-      <footer class="site-footer">
+
+
+
+
+
+
+
+
+
+    
+
+  <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section">
         <h4 class="footer-title">FrontEnd Insights</h4>

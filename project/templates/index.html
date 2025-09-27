@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% block title %}FrontEnd Insights: Landing{% endblock title %}
+
+
 {% block header  %}
     <div class="hero-banner">
         <div class="banner-content">
@@ -9,7 +12,7 @@
     </div>
 {% endblock header %}
 
-{% block home_main %}
+{% block main %}
     <main class="main-content">
         <section class="cards-section">
             <div class="container">
@@ -25,7 +28,7 @@
                         </div>
                         <h3 class="card-title">HTML Fundamentals</h3>
                         <p class="card-description">Learn the building blocks of web development with comprehensive HTML guides and best practices.</p>
-                        <a href="#" class="card-link">Learn More</a>
+                        <a href="{{ url_for('language_dashboard', language='html') }}" class="card-link">Learn More</a>
                     </article>
 
                     <article class="card">
@@ -37,7 +40,7 @@
                         </div>
                         <h3 class="card-title">CSS Styling</h3>
                         <p class="card-description">Master modern CSS techniques, layouts, animations, and responsive design principles.</p>
-                        <a href="#" class="card-link">Learn More</a>
+                        <a href="{{ url_for('language_dashboard', language='css') }}" class="card-link">Learn More</a>
                     </article>
 
                     <article class="card">
@@ -49,7 +52,7 @@
                         </div>
                         <h3 class="card-title">JavaScript</h3>
                         <p class="card-description">Dive into interactive web development with JavaScript fundamentals and modern ES6+ features.</p>
-                        <a href="#" class="card-link">Learn More</a>
+                        <a href="{{ url_for('language_dashboard', language='javascript') }}" class="card-link">Learn More</a>
                     </article>
 
                     <article class="card">
@@ -61,11 +64,11 @@
                         </div>
                         <h3 class="card-title">Python Basics</h3>
                         <p class="card-description">Get started with Python programming for web development and automation scripts.</p>
-                        <a href="#" class="card-link">Learn More</a>
+                        <a href="{{ url_for('language_dashboard', language='python') }}" class="card-link">Learn More</a>
                     </article>
 
                 </div>
             </div>
         </section>
     </main>
-{% endblock home_main %}
+{% endblock main %}
