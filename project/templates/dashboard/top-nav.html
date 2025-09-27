@@ -1,25 +1,25 @@
     <nav class="top-nav">
         <div class="nav-brand">
-            <i class="fas fa-chart-line"></i>
+            <i class="{{dashboard_title_icon}}"></i>
             <span>{{ dashboard_title }}</span>
         </div>
         
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="#" class="nav-link active" data-section="analytics">
-                    <i class="fas fa-chart-bar"></i>
+                <a href="{{ url_for('language_dashboard', language=nav_item1|lower) }}" class="nav-link active" data-section="analytics">
+                    <i class="{{main_nav_icon1}}"></i>
                     <span>{{nav_item1}}</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" data-section="projects">
-                    <i class="fas fa-folder"></i>
+                <a href="{{ url_for('language_dashboard', language=nav_item2|lower) }}" class="nav-link" data-section="projects">
+                    <i class="{{main_nav_icon2}}"></i>
                     <span>{{nav_item2}}</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link" data-section="users">
-                    <i class="fas fa-users"></i>
+                <a href="{{ url_for('language_dashboard', language=nav_item3|lower) }}" class="nav-link" data-section="users">
+                    <i class="nav-icon {{main_nav_icon3}}"></i>
                     <span>{{nav_item3}}</span>
                 </a>
             </li>

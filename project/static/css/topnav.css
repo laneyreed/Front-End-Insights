@@ -25,6 +25,11 @@
 
 .nav-brand i {
     font-size: 1.8rem;
+    
+}
+
+.nav-item i{
+   color: #34495e;
 }
 
 .nav-menu {
@@ -47,9 +52,11 @@
 }
 
 .nav-link:hover,
-.nav-link.active {
+.nav-link:hover i,
+.nav-link.active,
+.nav-link.active i {
     color: #fff;
-    background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);;
+    background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
 }
 
 .nav-profile {
