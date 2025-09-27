@@ -1,6 +1,9 @@
 @import url('./home-banner.css');
 @import url('./home-cards.css');
 @import url('./topnav.css');
+@import url('./sidebar.css');
+@import url('./dash-main-area.css');
+@import url('./main-content.css');
 @import url('./footer.css');
 
 *{

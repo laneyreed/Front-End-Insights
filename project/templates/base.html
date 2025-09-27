@@ -82,6 +82,12 @@
       <p class="footer-copyright">&copy; 2025 FrontEnd Insights. All rights reserved.</p>
     </div>
   </footer>
+
+      <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
     
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block jsScript %}{% endblock jsScript %}
 </body>
 </html>

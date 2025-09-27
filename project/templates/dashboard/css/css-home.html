@@ -6,6 +6,13 @@
     {% include 'dashboard/top-nav.html' %}
 {% endblock header %}
 
-{% block home_main %}
+{% block main %}
+    <div class="dashboard-container">
+        {% include 'dashboard/sidebar.html' %}
+        {% include 'dashboard/main-content.html' %}
+    </div>
+{% endblock main %}
 
-{% endblock home_main %}
+{% block jsScript %}
+    
+{% endblock jsScript %}

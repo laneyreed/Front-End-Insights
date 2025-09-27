@@ -1,26 +1,32 @@
     <nav class="top-nav">
         <div class="nav-brand">
-            <i class="{{dashboard_title_icon}}"></i>
-            <span>{{ dashboard_title }}</span>
+            <span>FRONTEND INSIGHTS</span>
         </div>
         
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="{{ url_for('language_dashboard', language=nav_item1|lower) }}" class="nav-link active" data-section="analytics">
-                    <i class="{{main_nav_icon1}}"></i>
-                    <span>{{nav_item1}}</span>
+                <a href="{{ url_for('language_dashboard', language='html') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'html' %}active{% endif %}">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url_for('language_dashboard', language=nav_item2|lower) }}" class="nav-link" data-section="projects">
-                    <i class="{{main_nav_icon2}}"></i>
-                    <span>{{nav_item2}}</span>
+                <a href="{{ url_for('language_dashboard', language='css') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'css' %}active{% endif %}">
+                    <i class="fa-brands fa-css3"></i>
+                    <span>CSS</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url_for('language_dashboard', language=nav_item3|lower) }}" class="nav-link" data-section="users">
-                    <i class="nav-icon {{main_nav_icon3}}"></i>
-                    <span>{{nav_item3}}</span>
+                <a href="{{ url_for('language_dashboard', language='javascript') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'javascript' %}active{% endif %}">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ url_for('language_dashboard', language='python') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'python' %}active{% endif %}">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
                 </a>
             </li>
         </ul>
