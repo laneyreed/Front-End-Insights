@@ -13,6 +13,8 @@ def language_dashboard(language):
     if language not in ["html", "css", "javascript", "python"]:
         return "Language not supported", 404
     if language == "python":
+        #Main navigation setup by defining the dashboard title and nav items in a dictionary
+        # and then passing them to the template using ** unpacking.
         mainNavItems = {# Python Main Navigation Setup
             "dashboard_title": "Python",
             "nav_item1": "HTML",
