@@ -5,7 +5,8 @@
         
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="{{ url_for('language_dashboard', language='html') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'html' %}active{% endif %}">
+                <a href="{{ url_for('language_dashboard', language='html') }}" class="nav-link 
+                {% if request.view_args and request.view_args.get('language') == 'html' %}active{% endif %}">
                     <i class="fa-brands fa-html5"></i>
                     <span>HTML</span>
                 </a>
