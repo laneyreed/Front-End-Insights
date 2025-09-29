@@ -9,6 +9,14 @@
 {% block main %}
     <div class="dashboard-container">
         {% include 'dashboard/sidebar.html' %}
-        {% include 'dashboard/dash-home-main.html' %}
+        {% if lang|lower() == 'python' %}
+            {% include 'dashboard/python/python-home.html' %}
+        {% elif lang|lower() == 'html' %}
+            {% include 'dashboard/html/html-home.html' %}
+        {% elif lang|lower() == 'css' %}
+            {% include 'dashboard/css/css-home.html' %}
+        {% elif lang|lower() == 'javascript' %}
+            {% include 'dashboard/javascript/javascript-home.html' %}
+        {% endif %}
     </div>
 {% endblock main %}
