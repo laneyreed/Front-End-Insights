@@ -10,6 +10,8 @@ def home():
 @app.route("/dashboard/<language>")
 def language_dashboard(language):
     if language == "html":
+        language= "HTML"
+        resources = ["HTML Tutorial", "https://www.w3schools.com/html"]
         concepts = [
             "Semantic Elements",    
             "Complex Forms",
@@ -18,9 +20,11 @@ def language_dashboard(language):
             "Accessibility",
             "Best Practices"
         ]
-        return render_template("dashboard/dashboard.html", title="HTML", concepts=concepts)
+        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
         
     elif language == "css":
+        language= "CSS"
+        resources = ["CSS Tutorial", "https://www.w3schools.com/css"]
         concepts = [
             "Flexbox & Grid",
             "Animations", 
@@ -29,9 +33,11 @@ def language_dashboard(language):
             "Advanced Selectors",
             "Performance"
         ]
-        return render_template("dashboard/dashboard.html", title="CSS", concepts=concepts)
+        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
         
     elif language == "javascript":
+        language= "JavaScript"
+        resources = ["JavaScript Tutorial", "https://www.w3schools.com/js"]
         concepts = [
             "ES6+ Features",
             "DOM Manipulation",
@@ -40,9 +46,10 @@ def language_dashboard(language):
             "Modules",
             "Best Practices"
         ]
-        return render_template("dashboard/dashboard.html", title="JavaScript", concepts=concepts)
+        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
         
     elif language == "python":
+        language= "Python"
         concepts = [
             "Variables & Data Types",
             "Functions & Classes", 
@@ -51,7 +58,15 @@ def language_dashboard(language):
             "Libraries & Modules",
             "Error Handling"
         ]
-        return render_template("dashboard/dashboard.html", title="Python", concepts=concepts)
+        resources = ["Python For Beginners", "https://www.python.org/about/gettingstarted"]
+        # resources = [
+        #     {"beginner": "https://www.learnpython.org/"},
+            # {"intermediate": "https://realpython.com/"},
+            # {"name": "Official Python Documentation", "url": "https://docs.python.org/3/"},
+            # {"name": "Real Python Tutorials", "url": "https://realpython.com/"},
+            # {"name": "Automate the Boring Stuff with Python", "url": "https://automatetheboringstuff.com/"}
+        #]
+        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
         
     else:
         return "Language not found", 404
