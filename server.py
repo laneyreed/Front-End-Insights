@@ -55,12 +55,12 @@ def language_dashboard(language):
     elif language == "python":
         language= "Python"
         concepts = [
-            "Variables & Data Types",
-            "Functions & Classes", 
-            "Loops & Conditionals",
-            "File Handling",
-            "Libraries & Modules",
-            "Error Handling"
+            "Templating Engines",
+            "Data Processing for Frontend", 
+            "File Handling & Media",
+            "Frontend Asset Management",
+            "PyScript",
+            "Python-based UI Frameworks"
         ]
         resources = ["Python For Beginners", "https://www.python.org/about/gettingstarted"]
         # resources = [
