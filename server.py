@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/gap-test")
+def gap_test():
+    return render_template("gap-test.html")
+
 
 @app.route("/dashboard/<language>")
 def language_dashboard(language):
