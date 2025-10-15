@@ -6,12 +6,32 @@
   background-color: #f8f9fa;
 }
 
-.concept-header p{
-    color: #cacbce;
-    text-align: center;
+.concept-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-/* CSS Grid Layout for Concept Descriptions */
+.element {
+  color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #45855D;
+  background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
+  border: 1px solid rgba(69, 133, 93, 1);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.demo-article {
+  background-color: #e9ecef;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 8px;
+}
+
 .demo-grid{
   display: grid;
   gap: 2rem;
@@ -26,18 +46,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.element {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1f3f4;;
-  border: 1px solid rgba(69, 133, 93, 1);
-  padding: 5px;
-  border-radius: 3px;
+.demo-grid-example {
+  grid-template-columns: 3fr 1fr;
 }
 
 .element-info, .best-practices{
-    color: #cacbce;
+    color: #34495e;
     font-weight: bolder;
 }
 
@@ -46,8 +60,18 @@
     flex-direction: column;
     justify-content: center;
  
-  
 }
+
+.concept-header p{
+    color: #34495e;
+    /* color: #cacbce; */
+    text-align: center;
+}
+
+
+
+
+
 
 .demo-nav{
     /* background-color: #e2e8f0;
@@ -73,13 +97,7 @@
   margin: 10px 0;
 }
 
-.demo-article {
-  background: #45855d;
-  background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-}
+
 
 .demo-aside {
   background-color: #d1ecf1;

@@ -1,21 +1,31 @@
 <main class="main-content">
-
     <div class="content-header">
         <h1 id="page-title">{{ lang }} Semantic Elements</h1>
     </div>
 
     <div class="content-body" id="content-body">
         <!-- SECTION: Introduction -->
-        <section class="mb-5">
-            <div class="concept-page-intro">
-                <h2 class="text-primary">What are Semantic Elements?</h2>
-                <p class="lead">Semantic elements clearly describe their meaning in a human and machine-readable way.
-                    They provide structure and meaning to the content they enclose, improving accessibility and SEO.</p>
-            </div>
+        <section class="concept-page-intro">
+            <h2>What are Semantic Elements?</h2>
+            <p>Semantic elements clearly describe their meaning in a human and machine-readable way.</p>
+            <br>
+            <p>They provide structure and meaning to the content they enclose, improving accessibility and SEO.</p>
+                        <br>
+
+            <p>Using semantic elements helps create a well-structured and meaningful HTML document.</p>
         </section>
 
+        <nav class="concept-nav">
+            <a class="element demo-active" href="#header-element">Header</a>
+            <a class="element" href="#nav-element">Nav</a>
+            <a class="element" href="#main-element">Main</a>
+            <a class="element" href="#article-section-elements">Article & Section</a>
+            <a class="element" href="#aside-element">Aside</a>
+            <a class="element" href="#footer-element">Footer</a>
+        </nav>
+
         <!-- ARTICLE: Header Element Demo -->
-        <article class="demo-article">
+        <article id="header-element" class="demo-article">
             <!------------ HEADER ------------>
             <header class="demo-grid demo-grid-intro">
                 <!------------ ELEMENT ------------>
@@ -62,7 +72,7 @@
         </article>
 
         <!-- ARTICLE: Navigation Element Demo -->
-        <article class="demo-article">
+        <article id="nav-element" class="demo-article">
             <!------------ HEADER ------------>
             <header class="demo-grid demo-grid-intro">
                 <!------------ ELEMENT ------------>
@@ -119,9 +129,8 @@
 
         </article>
 
-
         <!-- ARTICLE: Main Element Demo -->
-        <article class="demo-article">
+        <article id="main-element" class="demo-article">
             <!------------ HEADER ------------>
             <header class="demo-grid demo-grid-intro">
                 <!------------ ELEMENT ------------>
@@ -166,15 +175,8 @@
 
         </article>
 
-
-
-
-
-
-
-
-        <!-- ARTICLE: Article Element Demo -->
-        <article class="demo-article">
+        <!-- ARTICLE: ARTICLE & SECTION Element Demo -->
+        <article id="article-section-elements" class="demo-article">
             <!------------ HEADER ------------>
             <header class="concept-header">
 
@@ -251,6 +253,52 @@
 
             </div>
 
+
         </article>
+
+
+        <!-- ARTICLE: ASIDE Element Demo -->
+        <article id="aside-element" class="demo-article">
+            <!------------ HEADER ------------>
+            <header class="demo-grid demo-grid-intro">
+                <!------------ ELEMENT ------------>
+                <div class="element">
+                    <h2>&lt;aside&gt;</h2>
+                </div>
+                <!------------ ELEMENT INFO ------------>
+                <div class="element-info">
+                    <ul>
+                        <li>used to represent content that is related to the main content but is not essential to its understanding</li>
+                        <li>often contains sidebars, pull quotes, advertisements or other tangentially related information</li>
+                        <li>can improve accessibility by providing additional context or information</li>
+                        <li>helps search engines understand the structure of the page and the relationship between different content</li>
+                    </ul>
+                </div>
+
+            </header>
+
+            <!------------ DEMO GRID ------------>
+            <div class="demo-grid demo-grid-code">
+                <!------------ CODE EXAMPLE ------------>
+                <div class="code-example">
+                    &lt;aside&gt;<br>
+                    &nbsp;&nbsp;&lt;h4&gt;Related&lt;/h4&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Content...&lt;/p&gt;<br>
+                    &lt;/aside&gt;
+                </div>
+                <!------------ BEST PRACTICES ------------>
+                <div class="best-practices">
+                    <h5>Best Practices:</h5>
+                    <ul>
+                        <li>Use &lt;aside&gt; for tangentially related content</li>
+                        <li>Keep &lt;aside&gt; content concise and relevant</li>
+                        <li>Can be used multiple times per page</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </article>
+
     </div>
 </main>
