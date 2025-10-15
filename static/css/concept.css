@@ -1,0 +1,102 @@
+.concept-page-intro {
+  border: 2px dashed rgba(69, 133, 93, 1);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
+
+.concept-header p{
+    color: #cacbce;
+    text-align: center;
+}
+
+/* CSS Grid Layout for Concept Descriptions */
+.demo-grid{
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.demo-grid-intro {
+  grid-template-columns: 1fr 4fr;
+}
+
+.demo-grid-code {
+  grid-template-columns: 1fr 1fr;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f3f4;;
+  border: 1px solid rgba(69, 133, 93, 1);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.element-info, .best-practices{
+    color: #cacbce;
+    font-weight: bolder;
+}
+
+.best-practices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+  
+}
+
+.demo-nav{
+    /* background-color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px; */
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.demo-nav-links{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.code-example {
+  background-color: #f1f3f4;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.demo-article {
+  background: #45855d;
+  background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.demo-aside {
+  background-color: #d1ecf1;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+}
+.demo-section {
+  background-color: #f8d7da;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border-left: 4px solid #dc3545;
+}
+.demo-nav {
+  background-color: #d4edda;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+}

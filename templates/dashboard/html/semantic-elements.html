@@ -1,0 +1,256 @@
+<main class="main-content">
+
+    <div class="content-header">
+        <h1 id="page-title">{{ lang }} Semantic Elements</h1>
+    </div>
+
+    <div class="content-body" id="content-body">
+        <!-- SECTION: Introduction -->
+        <section class="mb-5">
+            <div class="concept-page-intro">
+                <h2 class="text-primary">What are Semantic Elements?</h2>
+                <p class="lead">Semantic elements clearly describe their meaning in a human and machine-readable way.
+                    They provide structure and meaning to the content they enclose, improving accessibility and SEO.</p>
+            </div>
+        </section>
+
+        <!-- ARTICLE: Header Element Demo -->
+        <article class="demo-article">
+            <!------------ HEADER ------------>
+            <header class="demo-grid demo-grid-intro">
+                <!------------ ELEMENT ------------>
+                <div class="element">
+                    <h2>&lt;header&gt;</h2>
+                </div>
+                <!------------ ELEMENT INFO ------------>
+                <div class="element-info">
+                    <ul>
+                        <li>used to represent introductory content or a group of navigational links for a section of a
+                            document or the entire document</li>
+                        <li>improves accessibility and SEO by explicitly indicating to browsers and search engines that
+                            the enclosed content is introductory or navigational</li>
+                        <li>commonly found at the top of a webpage, but can also be used within other sectioning
+                            elements like &lt;article&gt; or &lt;section&gt; to provide a header for that specific
+                            section</li>
+                        <li>helps organize the document's structure, making the HTML code cleaner and more readable</li>
+                    </ul>
+                </div>
+
+            </header>
+
+            <!------------ DEMO GRID ------------>
+            <div class="demo-grid demo-grid-code">
+                <!------------ CODE EXAMPLE ------------>
+                <div class="code-example">
+                    &lt;header&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;Site Title&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&lt;nav&gt;...navigation...&lt;/nav&gt;<br>
+                    &lt;/header&gt;
+                </div>
+                <!------------ BEST PRACTICES ------------>
+                <div class="best-practices">
+                    <h5>Best Practices:</h5>
+                    <ul>
+                        <li>Use for introductory content or navigation</li>
+                        <li>Can be used multiple times per page</li>
+                        <li>Should not contain &lt;footer&gt; elements</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ARTICLE: Navigation Element Demo -->
+        <article class="demo-article">
+            <!------------ HEADER ------------>
+            <header class="demo-grid demo-grid-intro">
+                <!------------ ELEMENT ------------>
+                <div class="element">
+                    <h2>&lt;nav&gt;</h2>
+                </div>
+                <!------------ ELEMENT INFO ------------>
+                <div class="element-info">
+                    <ul>
+                        <li>used to reprsent a section of a page that contains navigation links, either to other pages
+                            within the same website or to different sections within the current page</li>
+                        <li>explicitly marks a block of navigation links, improving accessibility and SEO by making the
+                            page structure clearer</li>
+                        <li>a page can have multiple &lt;nav&gt; elements if there are distinct navigation sections</li>
+                        <li>can include breadcrumbs for better navigation</li>
+                    </ul>
+                </div>
+            </header>
+
+            <!------------ DEMO GRID ------------>
+            <div class="demo-grid demo-grid-code">
+                <!------------ CODE EXAMPLE ------------>
+                <div class="code-example">
+                    &lt;nav&gt;<br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/nav&gt;
+                </div>
+
+                <!------------ BEST PRACTICES ------------>
+                <div class="best-practices">
+                    <h5>Best Practices:</h5>
+                    <ul>
+                        <li>Use for major navigation blocks</li>
+                        <li>Don't overuse - not every link group needs nav</li>
+                        <li>Can be used multiple times per page</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!------------ DEMO EXAMPLE ------------>
+            <nav class="demo-nav">
+                <a class="demo-nav-link demo-active" href="">Home</a>
+                <a class="demo-nav-link" href="">About</a>
+                <a class="demo-nav-link" href="">Services</a>
+                <a class="demo-nav-link" href="">Contact</a>
+            </nav>
+
+
+        </article>
+
+
+        <!-- ARTICLE: Main Element Demo -->
+        <article class="demo-article">
+            <!------------ HEADER ------------>
+            <header class="demo-grid demo-grid-intro">
+                <!------------ ELEMENT ------------>
+                <div class="element">
+                    <h2>&lt;main&gt;</h2>
+                </div>
+                <!------------ ELEMENT INFO ------------>
+                <div class="element-info">
+                    <ul>
+                        <li>used to represent the dominant content of the &lt;body&gt; of a document</li>
+                        <li>should be unique to the document and not contain content that is repeated across documents
+                            such as sidebars, navigation links, or footers</li>
+                        <li>improves accessibility by allowing assistive technologies to quickly locate the main content
+                            of the page</li>
+                        <li>helps search engines understand the primary topic of the page, potentially improving SEO
+                        </li>
+                    </ul>
+                </div>
+
+            </header>
+
+            <!------------ DEMO GRID ------------>
+            <div class="demo-grid demo-grid-code">
+                <!------------ CODE EXAMPLE ------------>
+                <div class="code-example">
+                    &lt;main&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;Welcome to Our Website&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Here is the main content of the page...&lt;/p&gt;<br>
+                    &lt;/main&gt;
+                </div>
+                <!------------ BEST PRACTICES ------------>
+                <div class="best-practices">
+                    <h5>Best Practices:</h5>
+                    <ul>
+                        <li>Only one &lt;main&gt; element per page</li>
+                        <li>Should contain primary content</li>
+                        <li>Should not contain headers, footers, sidebars</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+
+
+
+
+
+        <!-- ARTICLE: Article Element Demo -->
+        <article class="demo-article">
+            <!------------ HEADER ------------>
+            <header class="concept-header">
+
+                <!------------ ARTICLE ELEMENT ------------>
+                <div class="demo-grid demo-grid-intro">
+                    <!------------ ELEMENT ------------>
+                    <div class="element">
+                        <h2>&lt;article&gt;</h2>
+                    </div>
+                    <!------------ ELEMENT INFO ------------>
+                    <div class="element-info">
+                        <ul>
+                            <li>used to represent a self-contained content that is, in principle, independently
+                                distributable or reusable</li>
+                            <li>content should make sense on its own, even if removed from the surrounding context of
+                                the webpage</li>
+                            <li>&lt;article&gt; elements can be nested, the inner &lt;article&gt; elements represent
+                                content that is related to the outer &lt;article&gt; elements</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!------------ SECTION ELEMENT ------------>
+                <div class="demo-grid demo-grid-intro">
+                    <!------------ ELEMENT ------------>
+                    <div class="element">
+                        <h2>&lt;section&gt;</h2>
+                    </div>
+                    <!------------ ELEMENT INFO ------------>
+                    <div class="element-info">
+                        <ul>
+                            <li>used to represent a generic standalone section of a document or application</li>
+                            <li>used to group related content that forms a thematic unit, often with a heading</li>
+                            <li>use &lt;section&gt; when there isn't a more specific semantic element available (like &lt;article&gt;, &lt;aside&gt;, or &lt;nav&gt;) to represent the content</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <p>
+                    While both are sectioning elements, &lt;article&gt; is for standalone, independently distributable content, 
+                    whereas &lt;section&gt; groups related content within a larger document or another section.
+                </p>
+            </header>
+
+
+            <!------------ DEMO GRID ------------>
+            <div class="demo-grid demo-grid-code">
+                <!------------ CODE EXAMPLE ------------>
+                <div class="code-example">
+                    &lt;article&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;News Story 1&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Here is the story content...&lt;/p&gt;<br>
+                    &lt;/article&gt;
+                    <br><br>
+                    &lt;article&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;News Story 2&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;Here is the story content...&lt;/p&gt;<br>
+                    &lt;/article&gt;
+                </div>
+                <!------------ BEST PRACTICES ------------>
+                                <div class="code-example">
+                    &lt;section&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;Our Products&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;this is the section about our products...&lt;/p&gt;<br>
+                    &lt;/section&gt;
+                    <br><br>
+                    &lt;section&gt;<br>
+                    &nbsp;&nbsp;&lt;h2&gt;Our Team&lt;/h2&gt;<br>
+                    &nbsp;&nbsp;&lt;p&gt;this is the section about our team...&lt;/p&gt;<br>
+                    &lt;/section&gt;
+                </div>
+
+            </div>
+
+        </article>
+    </div>
+</main>

@@ -15,12 +15,13 @@
 }
 
 .sidebar-header {
+
     padding: 2rem;
     border-bottom: 1px solid #e2e8f0;
 }
 
 .sidebar-header h3 {
-    color: #1e293b;
+    color: rgba(69, 133, 93, 1);
     font-size: 1.25rem;
     font-weight: 600;
 }

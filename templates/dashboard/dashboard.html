@@ -9,13 +9,30 @@
 {% block main %}
     <div class="dashboard-container">
         {% include 'dashboard/sidebar.html' %}
-        {% if lang|lower() == 'python' %}
-            {% include 'dashboard/python/python-home.html' %}
+         
+        {% if request.args.get('concept') == 'Semantic Elements' %}
+            {% include 'dashboard/html/semantic-elements.html' %}
         {% elif lang|lower() == 'html' %}
             {% include 'dashboard/html/html-home.html' %}
-        {% elif lang|lower() == 'css' %}
+        {% endif %}
+
+
+
+
+        
+        {% if lang|lower() == 'python' %}
+            {% include 'dashboard/python/python-home.html' %}
+        {% endif %}
+
+
+
+
+        {% if lang|lower() == 'css' %}
             {% include 'dashboard/css/css-home.html' %}
-        {% elif lang|lower() == 'javascript' %}
+        {% endif %}
+
+
+        {% if lang|lower() == 'javascript' %}
             {% include 'dashboard/javascript/javascript-home.html' %}
         {% endif %}
     </div>

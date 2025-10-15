@@ -9,15 +9,14 @@
         <ul>
             {% for concept in concepts %}
                 <li>
-                    <a href="#" class="{% if loop.first %}active{% else %}{% endif %}">
+                    <a href="{{ url_for('language_dashboard', language=lang | lower, concept=concept) }}" class="sidebar-link {% if request.view_args and request.view_args.get('concept') == concept %}active{% endif %}">
                         {{ concept }}
                     </a>
                 </li>
             {% endfor %}
         </ul>
-
-        <ul>
-            
-        </ul>
     </nav>
         </aside>
+
+
+
