@@ -467,20 +467,21 @@
         <!-- ARTICLE: ADDRESS Element Demo -->
         <article id="address-element" class="demo-article">
             <!------------ HEADER ------------>
-            <header class="demo-grid demo-grid-intro">
-                <!------------ ELEMENT ------------>
-                <div class="element">
-                    <h2>&lt;address&gt;</h2>
+            <header class="concept-header">
+                <div class="demo-grid demo-grid-intro">
+                    <!------------ ELEMENT ------------>
+                    <div class="element">
+                        <h2>&lt;address&gt;</h2>
+                    </div>
+                    <!------------ ELEMENT INFO ------------>
+                    <div class="element-info">
+                        <ul>
+                            <li>used to provide contact information for the nearest &lt;body&gt; or &lt;article&gt; ancestor</li>
+                            <li>typically relates to the author, owner, or maintainer of the content</li>
+                            <li>improves accessibility by clearly indicating contact information to assistive technologies</li>
+                        </ul>
+                    </div>
                 </div>
-                <!------------ ELEMENT INFO ------------>
-                <div class="element-info">
-                    <ul>
-                        <li>used to provide contact information for the nearest &lt;body&gt; or &lt;article&gt; ancestor</li>
-                        <li>typically relates to the author, owner, or maintainer of the content</li>
-                        <li>improves accessibility by clearly indicating contact information to assistive technologies</li>
-                    </ul>
-                </div>
-
             </header>
 
             <!------------ DEMO GRID ------------>
@@ -509,7 +510,7 @@
 
 
         <!-- ARTICLE:FIGURE Element Demo -->
-        <article id="aside-element" class="demo-article">
+        <article id="figure-element" class="demo-article">
             <!------------ HEADER ------------>
             <header class="concept-header">
                 <!------------ FIGURE ELEMENT ------------>
@@ -574,13 +575,12 @@
         </article>
 
 
-        <!-- ARTICLE:DETAILS & SUMMARY Element Demo -->
-        <article id="aside-element" class="demo-article">
+        <!-- ARTICLE: DETAILS & SUMMARY Element Demo -->
+        <article id="details-summary-element" class="demo-article">
 
             <!------------ HEADER ------------>
             <header class="concept-header">
                 <h3>The &lt;details&gt; and &lt;summary&gt; elements work together to create a native disclosure widget</h3>
-                <h3>They are designed with accessibility in mind, providing a semantic structure for collapsible content.</h3>
                 <!------------ FIGURE ELEMENT ------------>
                 <div class="demo-grid demo-grid-intro">
                     <!------------ ELEMENT ------------>
@@ -616,52 +616,221 @@
                 </div>
             </header>
 
-            <!------------ DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                    &lt;details&gt;<br>
-                    &nbsp;&nbsp;&lt;summary&gt;Click me&lt;/summary&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;Hidden content&lt;/p&gt;<br>
-                    &lt;/details&gt;
-                </div>
-                <!------------ BEST PRACTICES ------------>
-                <div class="best-practices">
-                    <ul>
-                        <li>the content inside &lt;details&gt; is hidden until the user interacts with the &lt;summary&gt;</li>
-                        <li>avoid using &lt;details&gt; for content that should always be visible, as this can lead to a confusing user experience</li>                    </ul>
-                </div>
 
+            <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <h3>The content inside &lt;details&gt; is hidden until the user interacts with the &lt;summary&gt;</h3>
+
+                <div class="example-container">
+                    <div class="demo-example">
+                        <!------------ CODE EXAMPLE ------------>
+                        <div class="code-example">
+                            &lt;details&gt;<br>
+                            &nbsp;&nbsp;&lt;summary&gt;Click to reveal more details&lt;/summary&gt;<br>
+                            &nbsp;&nbsp;&lt;p&gt;Hidden Content&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&lt;ul&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&lt;/ul&gt;<br>
+                            &lt;/details&gt;
+                        </div>
+                    </div>
+
+                    <div class="demo-example">
+                        <details>
+                        <summary>Click to reveal more details</summary>
+                            <p>This is the hidden content that will be displayed when the summary is clicked.</p>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                            </ul>
+                        </details>
+                    </div>
+
+                </div>
+                
             </div>
 
             <!------------ DEMO EXAMPLE ------------>
             <div class="demo-examples">
-                <div class="demo-example demo-example-1">
-                <details>
-                <summary>Click to reveal more details</summary>
-                    <p>This is the hidden content that will be displayed when the summary is clicked.</p>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                    </ul>
-                </details>
+                <h3>The content inside &lt;details&gt; can be revealed or hidden by default, but it is always accessible to assistive technologies.</h3>
+
+                <div class="example-container">
+
+                <div class="demo-example">
+                 <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;details open&gt;<br>
+                        &nbsp;&nbsp;&lt;summary&gt;This section is open by default&lt;/summary&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;More content here.&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&lt;ul&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;/ul&gt;<br>
+                        &lt;/details&gt;
+                    </div>
                 </div>
 
                 <div class="demo-example demo-example-2">
                     <details open>
                     <summary>This section is open by default</summary>
                         <p>More content here.</p>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
                     </details>
                 </div>
+
+                </div>
+
+
+
+
                 
             </div>
 
 
         </article>
 
-    </div>
-           
-        
+
+
+        <!-- ARTICLE: CITATION Element Demo -->
+        <article id="citation-element" class="demo-article">
+            <!--------- CITATIONS HEADER ------------>
+             <header class="concept-header">
+                <div class="demo-grid demo-grid-intro">
+                    <!------------ ELEMENT ------------>
+                    <div class="element">
+                        <h2>&lt;cite&gt;</h2>
+                    </div>
+                    <!------------ ELEMENT INFO ------------>
+                    <div class="element-info">
+                        <ul>
+                            <li>the citation element is used to define the title of a creative work, such as a book, article, song, movie, or website</li>
+                            <li>is typically rendered in italics by browsers</li>
+                        </ul>
+                </div>
+            </div>
+
+            </header>
+
+            <!------------ CITATIONS DEMO GRID ------------>
+
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;p&gt;<br>My favorite movie is &lt;cite&gt;Where The Heart Is&lt;/cite&gt; staring Natalie Portman.<br>&lt;/p&gt;
+                    </div>
+                </div>
+                <!------------ BEST PRACTICES ------------>
+                <div class="demo-example">
+                    <p>My favorite movie is <cite>Where The Heart Is</cite> staring Natalie Portman.</p>
+                </div>
+
+            </div>
+        </article>
+
+
+        <!-- ARTICLE:INLINE QUOTE Element Demo -->
+        <article id="inline-quote-element" class="demo-article">
+            <!------------ INLINE QUOTE HEADER ------------>
+             <header class="concept-header">
+                <div class="demo-grid demo-grid-intro">
+                    <!------------ ELEMENT ------------>
+                    <div class="element">
+                        <h2>&lt;q&gt;</h2>
+                    </div>
+                    <!------------ ELEMENT INFO ------------>
+                    <div class="element-info">
+                        <ul>
+                            <li>the inline quotation element is used for short, inline quotations that do not require paragraph breaks</li>
+                            <li>typically relates to the author, owner, or maintainer of the content</li>
+                            <li>browsers typically render the enclosed text with quotation marks</li>
+                            <li>can include a cite attribute, which provides a URL pointing to the source document or message for the quoted content</li>
+                            <li>the cite attribute is primarily for machine readability and is not directly displayed to the user</li>
+                        </ul>
+                </div>
+            </div>
+
+            </header>
+
+            <!------------ INLINE QUOTE DEMO GRID ------------>
+            <div class="demo-examples">
+
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;p&gt;Someone yelled,&lt;q&gt;FIRE&lt;/q&gt; and everyone ran.&lt;/p&gt;
+                    </div>
+                </div>
+                <!------------ BEST PRACTICES ------------>
+                <div class="demo-example">
+                    <p>Someone yelled, <q>FIRE</q> and everyone ran.</p>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ARTICLE: BLOCKQUOTE Element Demo -->
+        <article id="blockquote-element" class="demo-article">
+            <!------------ BLOCKQUOTE HEADER ------------>
+             <header class="concept-header">
+                <div class="demo-grid demo-grid-intro">
+                    <!------------ ELEMENT ------------>
+                    <div class="element">
+                        <h2>&lt;blockquote&gt;</h2>
+                    </div>
+                    <!------------ ELEMENT INFO ------------>
+                    <div class="element-info">
+                        <ul>
+                            <li>the block quotation element is used for longer quotations that require paragraph breaks, displayed as a separate block, often with indentation</li>
+                            <li>can include a cite attribute, which provides a URL pointing to the source document or message for the quoted content</li>
+                            <li>the cite attribute is primarily for machine readability and is not directly displayed to the user</li>
+                        </ul>
+                </div>
+            </div>
+
+            </header>
+
+
+            <!------------ BLOCKQUOTE DEMO EXAMPLES ------------>
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;blockquote&gt;<br>
+                        &nbsp;&lt;p&gt;
+                        <br>&nbsp;&nbsp;&nbsp;Butterflies go through four major stages of metamorphosis:<br>&nbsp;&nbsp; egg, caterpillar, 
+                        chrysalis and adult.<br>
+                        &nbsp;&lt;/p&gt;<br>
+                        &nbsp;&lt;footer&gt;<br>
+                           &nbsp;&nbsp;&lt;cite title="The Butterfly Website"&gt;<br>
+                           &nbsp;&nbsp; The Butterfly Website<br>
+                           &nbsp;&nbsp;&lt;/cite&gt;<br>
+                        &nbsp;&lt;/footer&gt;<br>
+                        &lt;/blockquote&gt;
+                    </div>
+                </div>
+
+                <div class="demo-example">
+                    <blockquote class="blockquote highlight-element p-3 border-start border-primary border-5 bg-light">
+                        <p class="mb-3">"Butterflies go through four major stages of metamorphosis: egg, caterpillar, chrysalis and adult."</p>
+                        <footer>
+                        <cite title="The Butterfly Website">The Butterfly Website</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+                
+            </div>
+
+        </article>
+
+
+
+
+
     </div>
 
 </main>
