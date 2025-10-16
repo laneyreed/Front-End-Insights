@@ -16,19 +16,19 @@
         </section>
 
         <nav class="concept-nav">
-            <a class="element demo-active" href="#header-element">Header</a>
-            <a class="element" href="#nav-element">Nav</a>
-            <a class="element" href="#main-element">Main</a>
-            <a class="element" href="#article-section-elements">Article & Section</a>
-            <a class="element" href="#aside-element">Aside</a>
-            <a class="element" href="#footer-element">Footer</a>
+            <a class="nav-element demo-active" href="#header-element">Header</a>
+            <a class="nav-element" href="#nav-element">Nav</a>
+            <a class="nav-element" href="#main-element">Main</a>
+            <a class="nav-element" href="#article-section-elements">Article & Section</a>
+            <a class="nav-element" href="#aside-element">Aside</a>
+            <a class="nav-element" href="#footer-element">Footer</a>
         </nav>
 
         <!-- ARTICLE: Header Element Demo -->
-        <article id="header-element" class="demo-article">
+        <article id="header-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
-                <div class="demo-grid demo-grid-intro">
+                <div class="concept-header-grid">
                     <!------------ ELEMENT ------------>
                     <div class="element">
                         <h2>&lt;header&gt;</h2>
@@ -50,39 +50,51 @@
                 </div>
             </header>
 
-            <!------------ DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                    &lt;header&gt;<br>
-                    &nbsp;&nbsp;&lt;h1&gt;Site Title&lt;/h1&gt;<br>
-                    &nbsp;&nbsp;&lt;nav&gt;...navigation...&lt;/nav&gt;<br>
-                    &lt;/header&gt;
+            <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;header&gt;<br>
+                        &nbsp;&nbsp;&lt;h1&gt;FrontEnd Insights&lt;/h1&gt;<br>
+                        &nbsp;&nbsp;&lt;h2&gt;Resource for modern Front-End web development&lt;/h2&gt;<br>
+                        &lt;/header&gt;                    
+                    </div>
                 </div>
-                <!------------ BEST PRACTICES ------------>
-                <div class="best-practices">
-                    <h5>Best Practices:</h5>
+
+                <div class="demo-example">
+                    <header class="demo-header">
+                        <h1>FrontEnd Insights</h1>
+                        <h2>Resource for modern Front-End web development</h2>
+                    </header>
+                </div>
+                
+            </div>
+
+            <!------------ BEST PRACTICES ------------>
+            <div class="best-practices">
+                <div>
+                    <h2>Best Practices</h2>
                     <ul>
                         <li>Use for introductory content or navigation</li>
                         <li>Can be used multiple times per page</li>
                         <li>Should not contain &lt;footer&gt; elements</li>
                     </ul>
                 </div>
-
             </div>
-
         </article>
 
         <!-- ARTICLE: Navigation Element Demo -->
-        <article id="nav-element" class="demo-article">
+        <article id="nav-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
 
-                <div class="demo-grid demo-grid-intro">
+                <div class="concept-header-grid">
                     <!------------ ELEMENT ------------>
                     <div class="element">
                         <h2>&lt;nav&gt;</h2>
                     </div>
+
                     <!------------ ELEMENT INFO ------------>
                     <div class="element-info">
                         <ul>
@@ -98,49 +110,53 @@
 
             </header>
 
-            <!------------ DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                    &lt;nav&gt;<br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;/ul&gt;<br>
-                    &lt;/nav&gt;
+
+            <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;nav&gt;<br>
+                        &nbsp;&nbsp;&lt;ul&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;/ul&gt;<br>
+                        &lt;/nav&gt;                 
+                    </div>
                 </div>
 
+                <div class="demo-example">
+                    <nav class="demo-nav">
+                        <a class="demo-nav-link demo-active" href="">Home</a>
+                        <a class="demo-nav-link" href="">About</a>
+                        <a class="demo-nav-link" href="">Services</a>
+                        <a class="demo-nav-link" href="">Contact</a>
+                    </nav>
+                
+                </div>
+            </div>
+
                 <!------------ BEST PRACTICES ------------>
-                <div class="best-practices">
-                    <h5>Best Practices:</h5>
+            <div class="best-practices">
+                <div>
+                    <h2>Best Practices</h2>
                     <ul>
                         <li>Use for major navigation blocks</li>
                         <li>Don't overuse - not every link group needs nav</li>
                         <li>Can be used multiple times per page</li>
                     </ul>
                 </div>
-
             </div>
-
-            <!------------ DEMO EXAMPLE ------------>
-            <nav class="demo-examples demo-nav">
-                <a class="demo-nav-link demo-active" href="">Home</a>
-                <a class="demo-nav-link" href="">About</a>
-                <a class="demo-nav-link" href="">Services</a>
-                <a class="demo-nav-link" href="">Contact</a>
-            </nav>
-
-
         </article>
 
         <!-- ARTICLE: Main Element Demo -->
-        <article id="main-element" class="demo-article">
+        <article id="main-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
 
-                <div class="demo-grid demo-grid-intro">
+                <div class="concept-header-grid">
                     <!------------ ELEMENT ------------>
                     <div class="element">
                         <h2>&lt;main&gt;</h2>
@@ -161,36 +177,44 @@
 
             </header>
 
-            <!------------ DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                    &lt;main&gt;<br>
-                    &nbsp;&nbsp;&lt;h1&gt;Welcome to Our Website&lt;/h1&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;Here is the main content of the page...&lt;/p&gt;<br>
-                    &lt;/main&gt;
+            <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;main&gt;<br>
+                        &nbsp;&nbsp;&lt;h1&gt;Welcome to Our Website&lt;/h1&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Here is the main content of the page...&lt;/p&gt;<br>
+                        &lt;/main&gt;                  
+                    </div>
                 </div>
-                <!------------ BEST PRACTICES ------------>
-                <div class="best-practices">
-                    <h5>Best Practices:</h5>
+
+                <div class="demo-example">
+
+                </div>
+                
+            </div>
+
+            <!------------ BEST PRACTICES ------------>
+            <div class="best-practices">
+                <div>
+                    <h2>Best Practices</h2>
                     <ul>
                         <li>Only one &lt;main&gt; element per page</li>
                         <li>Should contain primary content</li>
                         <li>Should not contain headers, footers, sidebars</li>
                     </ul>
                 </div>
-
             </div>
-
         </article>
 
         <!-- ARTICLE: ARTICLE & SECTION Element Demo -->
-        <article id="article-section-elements" class="demo-article">
+        <article id="article-section-elements" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
 
                 <!------------ ARTICLE ELEMENT ------------>
-                <div class="demo-grid demo-grid-intro">
+                <div class="concept-header-grid">
                     <!------------ ELEMENT ------------>
                     <div class="element">
                         <h2>&lt;article&gt;</h2>
@@ -232,46 +256,71 @@
                 </p>
             </header>
 
-
-            <!------------ DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                    &lt;article&gt;<br>
-                    &nbsp;&nbsp;&lt;h2&gt;News Story 1&lt;/h2&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;Here is the story content...&lt;/p&gt;<br>
-                    &lt;/article&gt;
-                    <br><br>
-                    &lt;article&gt;<br>
-                    &nbsp;&nbsp;&lt;h2&gt;News Story 2&lt;/h2&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;Here is the story content...&lt;/p&gt;<br>
-                    &lt;/article&gt;
-                </div>
-                <!------------ BEST PRACTICES ------------>
-                                <div class="code-example">
-                    &lt;section&gt;<br>
-                    &nbsp;&nbsp;&lt;h2&gt;Our Products&lt;/h2&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;this is the section about our products...&lt;/p&gt;<br>
-                    &lt;/section&gt;
-                    <br><br>
-                    &lt;section&gt;<br>
-                    &nbsp;&nbsp;&lt;h2&gt;Our Team&lt;/h2&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;this is the section about our team...&lt;/p&gt;<br>
-                    &lt;/section&gt;
+             <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;article&gt;<br>
+                        &nbsp;&nbsp;&lt;h2&gt;News Story 1&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Here is the story content...&lt;/p&gt;<br>
+                        &lt;/article&gt;
+                        <br><br>
+                        &lt;article&gt;<br>
+                        &nbsp;&nbsp;&lt;h2&gt;News Story 2&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Here is the story content...&lt;/p&gt;<br>
+                        &lt;/article&gt;                
+                    </div>
                 </div>
 
+                <div class="demo-example">
+
+                </div>
+                
             </div>
 
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;section&gt;<br>
+                        &nbsp;&nbsp;&lt;h2&gt;Our Products&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;this is the section about our products...&lt;/p&gt;<br>
+                        &lt;/section&gt;
+                        <br><br>
+                        &lt;section&gt;<br>
+                        &nbsp;&nbsp;&lt;h2&gt;Our Team&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;this is the section about our team...&lt;/p&gt;<br>
+                        &lt;/section&gt;
+                    </div>
+                </div>
+
+                <div class="demo-example">
+
+                </div>
+                
+            </div>
+
+            <!------------ BEST PRACTICES ------------>
+            <div class="best-practices">
+                <div>
+                    <h2>Best Practices</h2>
+                    <ul>
+                        <li>Use &lt;article&gt; for content that can stand alone (e.g., blog posts, news articles)</li>
+                        <li>Use &lt;section&gt; for grouping related content within a page (e.g., chapters, thematic groups)</li>
+                        <li>Both can be nested within each other as needed</li>
+                    </ul>
+                </div>
+            </div>
 
         </article>
 
 
         <!-- ARTICLE: ASIDE Element Demo -->
-        <article id="aside-element" class="demo-article">
+        <article id="aside-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
-
-                <div class="demo-grid demo-grid-intro">
+                <div class="concept-header-grid">
                     <!------------ ELEMENT ------------>
                     <div class="element">
                         <h2>&lt;aside&gt;</h2>
@@ -289,17 +338,26 @@
 
             </header>
 
-            <!------------ DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                    &lt;aside&gt;<br>
-                    &nbsp;&nbsp;&lt;h4&gt;Related&lt;/h4&gt;<br>
-                    &nbsp;&nbsp;&lt;p&gt;Content...&lt;/p&gt;<br>
-                    &lt;/aside&gt;
+            <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <div class="demo-example">
+                    <!------------ CODE EXAMPLE ------------>
+                    <div class="code-example">
+                        &lt;aside&gt;<br>
+                        &nbsp;&nbsp;&lt;h4&gt;Related&lt;/h4&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;Content...&lt;/p&gt;<br>
+                        &lt;/aside&gt;                   
+                    </div>
                 </div>
-                <!------------ BEST PRACTICES ------------>
-                <div class="best-practices">
+
+                <div class="demo-example">
+
+                </div>
+            </div>
+
+            <!------------ BEST PRACTICES ------------>
+            <div class="best-practices">
+                <div>
                     <h5>Best Practices:</h5>
                     <ul>
                         <li>Use &lt;aside&gt; for tangentially related content</li>
@@ -307,14 +365,13 @@
                         <li>Can be used multiple times per page</li>
                     </ul>
                 </div>
-
             </div>
 
         </article>
 
 
         <!-- SECTION: Text-level Semantic Elements -->
-        <article id="text-level-elements" class="demo-article">
+        <article id="text-level-elements" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-intro-header">
                 <h2>Text-Level Semantic Elements</h2>
@@ -357,7 +414,7 @@
 
 
         <!-- ARTICLE: TIME Element Demo -->
-        <article id="aside-element" class="demo-article">
+        <article id="time-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
 
@@ -379,93 +436,98 @@
 
             </header>
 
-            <div class="">
-                <ul>
-                    <li>Always include the <strong>datetime</strong> attribute</li>
-                    <li>Use a machine-readable format (e.g., YYYY-MM-DD)</li>
-                    <li>Provide human-readable text within the element</li>
-                </ul>
-            </div>
-
-            <!------------ YEAR STRING DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                   &lt;p&gt;<br>
-                   &nbsp;&nbsp;You must be born before &lt;time datetime="2003"&gt;2003&lt;/time&gt; to enter. <br>
-                   &lt;/p&gt;
-                </div>
-                <!------------ CODE DETAILS ------------>
-                <div class="code-details">
-                    <p>Valid year string: YYYY (e.g., 2025)</p>
-                </div>
-
-            </div>
-
-            <!------------ MONTH STRING DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                   &lt;p&gt;<br>
-                   &nbsp;&nbsp;The event ends in &lt;time datetime="2026-02"&gt;February 2026&lt;/time&gt;. <br>
-                   &lt;/p&gt;
-                </div>
-                <!------------ CODE DETAILS ------------>
-                <div class="code-details">
-                    <p>Valid month string: YYYY-MM (e.g., 2025-12)</p>
-                </div>
-
-            </div>
-
-            <!------------ DATE STRING DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                   &lt;p&gt;<br>
-                   &nbsp;&nbsp;The event starts on &lt;time datetime="2025-12-25"&gt;December 25th, 2025&lt;/time&gt;. <br>
-                   &lt;/p&gt;
-                </div>
-                <!------------ CODE DETAILS ------------>
-                <div class="code-details">
-                    <p>Valid date strings include:</p>
-                    <ul>
-                        <li>YYYY-MM-DD (e.g., 2025-12-25)</li>
-                        <li>YYYY-MM-DDTHH:MM:SS (e.g., 2025-12-25T10:30:00), local date and time strings</li>
-                        <li>YYYY-MM-DDTHH:MM:SSZ (e.g., 2025-12-25T10:30:00Z for UTC time),  global date and time strings with time-zone offset</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!------------ TIME STRING DEMO GRID ------------>
-            <div class="demo-grid demo-grid-code">
-                <!------------ CODE EXAMPLE ------------>
-                <div class="code-example">
-                   &lt;p&gt;<br>
-                   &nbsp;&nbsp;The meeting is scheduled for &lt;time datetime="14:30"&gt;2:30 pm&lt;/time&gt;.<br>&lt;/p&gt;
-                </div>
-                <!------------ CODE DETAILS ------------>
-                <div class="code-details">
-                    <p>Valid time strings include:</p>
-                    <ul>
-                        <li>HH:MM (e.g., 14:30)</li>
-                        <li>HH:MM:SS (e.g., 14:30:00)</li>
-                        <li>HH:MM:SSZ (e.g., 14:30:00Z for UTC time)</li>
-                    </ul>
-                </div>
-
-            </div>
-
             <!------------ TIME STRING DEMO GRID ------------>
             <h5>The datetime attribute of the HTML <time> element can represent a duration using the ISO 8601 duration format.</h5>
                 <br>
             <p><mark>P[nD][T[nH][nM][nS]]</mark></p>
 
+            <!------------ DEMO EXAMPLE ------------>
+            <div class="demo-examples">
+                <div class="demo-examples-container">
+                     <!------------ YEAR STRING CODE EXAMPLE ------------>
+                    <div class="demo-example">
+                        <p>Valid year string: YYYY (e.g., 2025)</p>
+                        <div class="code-example">
+                            &lt;p&gt;<br>
+                            &nbsp;&nbsp;You must be born before<br> &lt;time datetime="2003"&gt;2003&lt;/time&gt; to enter. <br>
+                            &lt;/p&gt;                    
+                        </div>
+                    </div>
+
+                    <!------------ MONTH STRING CODE EXAMPLE ------------>
+                    <div class="demo-example">
+                        <p>Valid month string: YYYY-MM (e.g., 2025-12)</p>
+                        <div class="code-example">
+                            &lt;p&gt;<br>
+                            &nbsp;&nbsp;The event ends in<br> &lt;time datetime="2026-02"&gt;February 2026&lt;/time&gt;. <br>
+                            &lt;/p&gt;
+                        </div>
+                    </div>
+
+                    <!------------ DATE STRING DEMO GRID ------------>
+                    <div class="demo-example">
+                        <p>Valid date string: YYYY-MM-DD (e.g., 2025-12-25)</p>
+                        <div class="code-example">
+                            &lt;p&gt;<br>
+                            &nbsp;&nbsp;The event starts on<br> &lt;time datetime="2025-12-25"&gt;December 25th, 2025&lt;/time&gt;. <br>
+                            &lt;/p&gt;                  
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>    
+            
+                <div class="demo-examples-container">
+
+                    <!------------ TIME STRING CODE EXAMPLE ------------>
+                    <div class="demo-example">
+                        <p>Valid time string: HH:MM (e.g., 14:30)</p>
+                        <div class="code-example">
+                            &lt;p&gt;<br>
+                            &nbsp;&nbsp;The meeting is scheduled for <br> &lt;time datetime="14:30"&gt;2:30 pm&lt;/time&gt;.<br>&lt;/p&gt;
+                        </div>
+                    </div>
+
+                    <!------------ TIME STRING CODE EXAMPLE ------------>
+                    <div class="demo-example">
+                        <p>Valid time string: HH:MM:SS (e.g., 14:30:00)</p>
+                        <div class="code-example">
+                            &lt;p&gt;<br>
+                            &nbsp;&nbsp;The meeting is scheduled for <br> &lt;time datetime="14:30:00"&gt;2:30 pm&lt;/time&gt;.<br>&lt;/p&gt;
+                        </div>
+                    </div>
+
+                    <!------------ TIME STRING CODE EXAMPLE ------------>
+                    <div class="demo-example">
+                        <p>Valid time string: HH:MM:SSZ (e.g., 14:30:00Z for UTC time)</p>
+                        <div class="code-example">
+                            &lt;p&gt;<br>
+                            &nbsp;&nbsp;The meeting is scheduled for <br> &lt;time datetime="14:30:00Z"&gt;2:30 pm&lt;/time&gt;.<br>&lt;/p&gt;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------ BEST PRACTICES ------------>
+            <div class="best-practices">
+                <div>
+                    <h2>Best Practices</h2>
+                    <ul>
+                        <li>Always include the <strong>datetime</strong> attribute</li>
+                        <li>Use a machine-readable format (e.g., YYYY-MM-DD)</li>
+                        <li>Provide human-readable text within the element</li>
+                    </ul>
+                </div>
+            </div>
+
+
         </article>
 
 
         <!-- ARTICLE: ADDRESS Element Demo -->
-        <article id="address-element" class="demo-article">
+        <article id="address-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
                 <div class="demo-grid demo-grid-intro">
@@ -510,7 +572,7 @@
 
 
         <!-- ARTICLE:FIGURE Element Demo -->
-        <article id="figure-element" class="demo-article">
+        <article id="figure-element" class="concept-container">
             <!------------ HEADER ------------>
             <header class="concept-header">
                 <!------------ FIGURE ELEMENT ------------>
@@ -576,7 +638,7 @@
 
 
         <!-- ARTICLE: DETAILS & SUMMARY Element Demo -->
-        <article id="details-summary-element" class="demo-article">
+        <article id="details-summary-element" class="concept-container">
 
             <!------------ HEADER ------------>
             <header class="concept-header">
@@ -696,7 +758,7 @@
 
 
         <!-- ARTICLE: CITATION Element Demo -->
-        <article id="citation-element" class="demo-article">
+        <article id="citation-element" class="concept-container">
             <!--------- CITATIONS HEADER ------------>
              <header class="concept-header">
                 <div class="demo-grid demo-grid-intro">
@@ -734,7 +796,7 @@
 
 
         <!-- ARTICLE:INLINE QUOTE Element Demo -->
-        <article id="inline-quote-element" class="demo-article">
+        <article id="inline-quote-element" class="concept-container">
             <!------------ INLINE QUOTE HEADER ------------>
              <header class="concept-header">
                 <div class="demo-grid demo-grid-intro">
@@ -774,7 +836,7 @@
         </article>
 
         <!-- ARTICLE: BLOCKQUOTE Element Demo -->
-        <article id="blockquote-element" class="demo-article">
+        <article id="blockquote-element" class="concept-container">
             <!------------ BLOCKQUOTE HEADER ------------>
              <header class="concept-header">
                 <div class="demo-grid demo-grid-intro">

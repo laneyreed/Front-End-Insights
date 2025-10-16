@@ -6,11 +6,56 @@
   background-color: #f8f9fa;
 }
 
+/*Concept Navigation*/
+
 .concept-nav {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+}
+
+.nav-element{
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(69, 133, 93, 1);
+  border-radius: 3px;
+  background-color: #f8f9fa;
+  color: #34495e;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-element:hover {
+  background-color: rgba(69, 133, 93, 1);
+  color: #ffffff;
+}
+
+/*Concept/Article*/
+
+
+.concept-container {
+  background-color: #e9ecef;
+  padding: 3rem;
+  margin: 25px 0;
+  border-radius: 8px;
+  border-left: 4px solid rgba(69, 133, 93, 1);
+}
+
+/* Concept Header */
+.concept-header{
+
+}
+
+.concept-header p {
+  color: #34495e;
+  text-align: center;
+}
+
+.concept-header-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 2rem;
 }
 
 .element {
@@ -21,17 +66,65 @@
   background: #45855d;
   background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
   border: 1px solid rgba(69, 133, 93, 1);
-  padding: 5px;
+  padding: 1rem 0;
   border-radius: 3px;
 }
 
-.demo-article {
-  background-color: #e9ecef;
-  padding: 20px;
-  margin: 25px 0;
-  border-radius: 8px;
-  border-left: 4px solid rgba(69, 133, 93, 1);
+.element-info{
+
 }
+
+.demo-examples-container{
+  display: flex;
+  flex-direction: column;
+}
+/* CONCEPT DEMO EXAMPLE */
+.demo-examples {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  background-color: #d4edda;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+  margin: 2rem 0;
+}
+
+.demo-example{
+  margin: 2rem;
+  width: 100%;
+  background-color: #e9ecef;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 4px solid #28a745;
+}
+
+.code-example {
+  background-color: #f1f3f4;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.best-practices {
+  display: flex;
+  background-color: #fff3cd;
+  padding: 3rem;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin: 2rem 0;
+}
+
+/* .example-container {
+  display: flex;
+} */
+
+
+/* Concept specific styles */
+
+
 
 .demo-grid {
   display: grid;
@@ -51,46 +144,8 @@
   grid-template-columns: 3fr 1fr;
 }
 
-.element-info,
-.best-practices {
-  color: #34495e;
-  font-weight: bolder;
-}
 
-.best-practices,
-.code-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.concept-header p {
-  color: #34495e;
-  /* color: #cacbce; */
-  text-align: center;
-}
-
-.demo-nav {
-  /* background-color: #e2e8f0;
-    padding: 15px;
-    border-radius: 8px; */
-  display: flex;
-  justify-content: space-around;
-}
-
-.demo-nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.code-example {
-  background-color: #f1f3f4;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: "Courier New", monospace;
-  font-size: 0.9em;
-  margin: 10px 0;
-}
 
 .demo-aside {
   background-color: #d1ecf1;
@@ -120,26 +175,54 @@
   border-radius: 3px;
 }
 
-.demo-examples {
+
+
+
+/*Header Element*/
+.demo-header{
+    width: 100%;
+    background: #FFFFFF;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.demo-header h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.demo-header h2{
+    font-size: 1rem;
+    text-align: center;
+    max-width: 600px;
+}
+
+/*Nav Element*/
+.demo-nav{
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.demo-nav {
+  /* background-color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px; */
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+}
+
+.demo-nav-links {
+  display: flex;
   gap: 1rem;
-  background-color: #d4edda;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid #28a745;
-  margin-bottom: 1rem;
-}
-
-.example-container {
-  display: flex;
-}
-
-.demo-example {
-  margin: 2rem;
-  width: 100%;
-  background-color: #e9ecef;
-  padding: 2rem;
-  border-radius: 8px;
-  border-top: 4px solid #28a745;
 }
