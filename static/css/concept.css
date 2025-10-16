@@ -30,6 +30,7 @@
   padding: 20px;
   margin: 25px 0;
   border-radius: 8px;
+  border-left: 4px solid rgba(69, 133, 93, 1);
 }
 
 .demo-grid{
@@ -55,7 +56,7 @@
     font-weight: bolder;
 }
 
-.best-practices{
+.best-practices, .code-details{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,9 +113,35 @@
   border-radius: 8px;
   border-left: 4px solid #dc3545;
 }
-.demo-nav {
+
+
+.grid-two{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.tag{
+  background: #45855D;
+  background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
+  color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.demo-examples {
+  display: flex;
   background-color: #d4edda;
   padding: 15px;
   border-radius: 8px;
   border-left: 4px solid #28a745;
+}
+
+.demo-example{
+  margin: 2rem;
+  width: 100%;
+  background-color: #e9ecef;;
+  padding: 2rem;
+  border-radius: 8px;
+  border-top: 4px solid #28a745;
 }
