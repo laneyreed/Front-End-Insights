@@ -29,6 +29,12 @@
     min-height: 600px;
 }
 
+.resource-link {
+    font-size: 16px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
 .intro p{
     margin-top: 1rem; color: #475569;
 }

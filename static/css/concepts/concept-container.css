@@ -1,0 +1,67 @@
+/* Concept */
+.concept-main {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .concept-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .concept-main {
+    padding: 1.5rem;
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .concept-main {
+    padding: 1rem;
+  }
+}
+
+/* Small tablet/Large phone (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .concept-main {
+        padding: 0.8rem;
+    }
+  }
+
+  /* Mobile (480px to 575px) */
+@media (max-width: 575px) and (min-width: 480px) {
+    .concept-main {
+        padding: 0.6rem;
+    }
+  }
+
+  /* Small mobile (360px to 479px) */
+@media (max-width: 479px) and (min-width: 360px) {
+    .concept-main {
+        padding: 0.4rem;
+    }
+  }
+
+/* Extra small (below 360px) */
+@media (max-width: 359px) {
+    .concept-main {
+        padding: 0.2rem;
+    }
+  }

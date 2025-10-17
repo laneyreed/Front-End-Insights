@@ -1,7 +1,7 @@
 
-{% macro render_concept(element_name, concept_description, best_practices) %}
+{% macro render_concept(tag_name, tag_purpose, best_practices) %}
             <!------------ HEADER ------------>
-            {{ render_concept_header(element_name, concept_description) }}
+            {{ render_concept_header(tag_name, tag_purpose) }}
 
             <div class="examples">
                 <div class="demo-example-pair">
@@ -18,22 +18,23 @@
     {% endmacro %}
 
 
-{% macro render_concept_header(element_name, concept_description) %}
+{% macro render_concept_header(tag_name, tag_purpose) %}
 <header class="concept-header">
     <div class="concept-header-grid">
-        <!------------ ELEMENT ------------>
-        <div class="element">
-            <h2>&lt;{{ element_name }}&gt;</h2>
+        <!------------ TAG ------------>
+        <div class="tag">
+            <h2>&lt;{{ tag_name }}&gt;</h2>
+            <p> {{ tag_purpose }}</p>
         </div>
 
-        <!------------ ELEMENT INFO ------------>
+        <!-- ---------- TAG INFO ----------
         <div class="element-info">
             <ul>
                 {% for description in concept_description %}
                 <li>{{ description }}</li>
                 {% endfor %}
             </ul>
-        </div>
+        </div> -->
     </div>
 </header>
 {% endmacro %}

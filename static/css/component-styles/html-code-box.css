@@ -1,0 +1,292 @@
+/* =====================================================
+   RESPONSIVE HTML CODE BOX STYLES
+   ===================================================== */
+
+/* HTML Code Container */
+.html-code-container {
+    position: relative;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    background-color: #d4edda;
+    border-radius: 10px;
+}
+
+/* HTML Code Header */
+.html-code-header {
+    background: rgba(69, 133, 93, 1);
+    color: white;
+    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(69, 133, 93, 0.3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.html-code-header::before {
+    content: "<header>";
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+/* HTML Code Display Box */
+.html-code-box {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: clamp(0.75rem, 1.8vw, 1rem);
+    line-height: 1.5;
+    padding: clamp(1rem, 3vw, 2rem);
+    margin: 0;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: clamp(300px, 50vh, 500px);
+    min-height: clamp(120px, 20vh, 200px);
+    resize: vertical;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #4a5568 #2d3748;
+    tab-size: 2;
+    -moz-tab-size: 2;
+}
+
+/* HTML Code Box - Read Only Version */
+.html-code-box.readonly {
+    background-color: #f8f9fa;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+    cursor: text;
+    user-select: text;
+}
+
+/* Custom Scrollbar for HTML Code */
+.html-code-box::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.html-code-box::-webkit-scrollbar-track {
+    background: #1a202c;
+    border-radius: 5px;
+}
+
+.html-code-box::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 5px;
+    border: 2px solid #2d3748;
+}
+
+.html-code-box::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+.html-code-box.readonly::-webkit-scrollbar-track {
+    background: #f1f3f4;
+}
+
+.html-code-box.readonly::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border: 2px solid #f8f9fa;
+}
+
+.html-code-box.readonly::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* HTML Syntax Highlighting */
+.html-tag { color: #f56565; font-weight: 500; }
+.html-attribute { color: #63b3ed; }
+.html-value { color: #68d391; }
+.html-text { color: #e2e8f0; }
+.html-comment { color: #a0aec0; font-style: italic; }
+.html-doctype { color: #fbb6ce; font-weight: 500; }
+
+/* Syntax highlighting for readonly version */
+.html-code-box.readonly .html-tag { color: #d73a49; }
+.html-code-box.readonly .html-attribute { color: #005cc5; }
+.html-code-box.readonly .html-value { color: #032f62; }
+.html-code-box.readonly .html-text { color: #24292e; }
+.html-code-box.readonly .html-comment { color: #6a737d; }
+.html-code-box.readonly .html-doctype { color: #d73a49; }
+
+/* =====================================================
+   HTML CODE BOX RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+    .html-code-box {
+        font-size: 1rem;
+        padding: 2rem;
+        line-height: 1.6;
+        min-height: 200px;
+        max-height: 500px;
+    }
+    
+    .html-code-header {
+        font-size: 1.1rem;
+        padding: 1.2rem 2rem;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .html-code-box {
+        font-size: 0.95rem;
+        padding: 1.8rem;
+        line-height: 1.55;
+        min-height: 180px;
+        max-height: 450px;
+    }
+    
+    .html-code-header {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .html-code-container {
+        margin: 1.2rem 0;
+    }
+    
+    .html-code-box {
+        font-size: 0.9rem;
+        padding: 1.5rem;
+        line-height: 1.5;
+        min-height: 160px;
+        max-height: 400px;
+    }
+    
+    .html-code-header {
+        padding: 0.9rem 1.3rem;
+        font-size: 1rem;
+    }
+}
+
+/* Small tablet/Large phone (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .html-code-container {
+        margin: 1rem 0;
+    }
+    
+    .html-code-box {
+        font-size: 0.85rem;
+        padding: 1.2rem;
+        line-height: 1.45;
+        min-height: 140px;
+        max-height: 350px;
+    }
+    
+    .html-code-header {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile (480px to 575px) */
+@media (max-width: 575px) and (min-width: 480px) {
+    .html-code-container {
+        margin: 0.8rem 0;
+    }
+    
+    .html-code-box {
+        font-size: 0.8rem;
+        padding: 1rem;
+        line-height: 1.4;
+        min-height: 120px;
+        max-height: 300px;
+    }
+    
+    .html-code-header {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile (360px to 479px) */
+@media (max-width: 479px) and (min-width: 360px) {
+    .html-code-container {
+        margin: 0.6rem 0;
+    }
+    
+    .html-code-box {
+        font-size: 0.75rem;
+        padding: 0.8rem;
+        line-height: 1.35;
+        min-height: 100px;
+        max-height: 250px;
+    }
+    
+    .html-code-header {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra small (below 360px) */
+@media (max-width: 359px) {
+    .html-code-container {
+        margin: 0.5rem 0;
+    }
+    
+    .html-code-box {
+        font-size: 0.7rem;
+        padding: 0.6rem;
+        line-height: 1.3;
+        min-height: 80px;
+        max-height: 200px;
+    }
+    
+    .html-code-header {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* =====================================================
+   HTML CODE BOX UTILITIES
+   ===================================================== */
+
+/* Prevent code overflow and ensure container safety */
+.html-code-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.html-code-box {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Focus styles for accessibility */
+.html-code-box:focus {
+    outline: 3px solid rgba(69, 133, 93, 0.5);
+    outline-offset: 2px;
+}
+
+/* Copy button styling (if needed later) */
+.html-code-copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(69, 133, 93, 0.8);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.html-code-container:hover .html-code-copy-btn {
+    opacity: 1;
+}

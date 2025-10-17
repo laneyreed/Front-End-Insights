@@ -4,22 +4,58 @@
 @import url('./sidebar.css');
 @import url('./dash-main-area.css');
 @import url('./main-content.css');
-@import url('./dash-home-main.css');
-@import url('./miniwebsite.css');
-@import url('./concept.css');
+
+/***************************** Concept Styles *****************************/
+/*Concept Info */
+@import url('./concepts/concept-container.css');
+@import url('./concepts/concept-intro.css');
+@import url('./concepts/concept-info.css');
+
+/* Concept Code */
+@import url('./component-styles/html-code-box.css');
+/* Concept Miniwebsite */
+@import url('./component-styles/miniwebsite.css');
+
+
+
 @import url('./footer.css');
 
-*{
+* {
     box-sizing: border-box;
 }
 
 /* Reset margins and padding for common elements, but not all elements */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+}
