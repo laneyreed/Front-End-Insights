@@ -1,0 +1,438 @@
+/* Mini Website Demo Styles */
+.mini-website {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(69, 133, 93, 0.15);
+  overflow: hidden;
+  border: 1px solid rgba(69, 133, 93, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mini-website::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(69, 133, 93, 1),
+    rgba(69, 133, 93, 0.7)
+  );
+}
+
+.mini-website:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(69, 133, 93, 0.25);
+}
+
+/* Header Section */
+.mini-website header {
+  background: linear-gradient(
+    135deg,
+    rgba(69, 133, 93, 0.95),
+    rgba(69, 133, 93, 0.85)
+  );
+  padding: 2rem 2.5rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.mini-website header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.mini-website:hover header::before {
+  transform: rotate(45deg) translateX(20px);
+}
+
+.mini-website header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.mini-website header h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Content Section */
+.mini-website main {
+  padding: 2.5rem;
+  background: #ffffff;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mini-website main h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: rgba(69, 133, 93, 1);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.mini-website main h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: rgba(69, 133, 93, 0.6);
+  border-radius: 2px;
+}
+
+.mini-website main p {
+  margin: 0;
+  color: #34495e;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Footer Section */
+.mini-website footer {
+  background: #f8f9fa;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid rgba(69, 133, 93, 0.1);
+  position: relative;
+}
+
+.mini-website footer p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.mini-website footer::before {
+  content: "🌐";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* Browser-like decoration */
+.mini-website::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1rem;
+  width: 12px;
+  height: 12px;
+  background: #ff5f57;
+  border-radius: 50%;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #28ca42;
+}
+
+/********************************* Demo Header *********************************/
+.demo-header {
+  background-color: #f8f9fa;
+  color: #34495e;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(69, 133, 93, 1);
+  margin: 1rem 0;
+  max-width: 400px;
+}
+
+.demo-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgba(69, 133, 93, 1);
+}
+
+.demo-header h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.8;
+  line-height: 1.4;
+  color: #34495e;
+}
+
+/********************************* Demo Nav *********************************/
+.demo-nav {
+  display: flex;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 1px;
+  border: 1px solid rgba(69, 133, 93, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.demo-nav-link {
+  padding: 0.25rem 0.75rem;
+  background: #ffffff;
+  color: #34495e;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.demo-nav-link:hover {
+  background-color: #e9ecef;
+  border-color: rgba(69, 133, 93, 1);
+  color: rgba(69, 133, 93, 1);
+}
+
+.demo-nav-link.demo-active {
+  background-color: rgba(69, 133, 93, 1);
+  color: #ffffff;
+  border-color: rgba(69, 133, 93, 1);
+  font-weight: 600;
+}
+
+.demo-nav-link.demo-active:hover {
+  background-color: #45855d;
+}
+
+/********************************************* Demo Articles within mini-website *********************************************/
+.demo-article {
+  background: rgba(69, 133, 93, 0.03);
+  border: 1px solid rgba(69, 133, 93, 0.15);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.demo-article:hover {
+  background: rgba(69, 133, 93, 0.06);
+  border-color: rgba(69, 133, 93, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(69, 133, 93, 0.1);
+}
+
+.demo-article h2 {
+  color: rgba(69, 133, 93, 1);
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.demo-article p {
+  color: #34495e;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/**************************************** Demo Sections within mini-website ****************************************/
+.demo-section {
+  background: rgba(69, 133, 93, 0.04);
+  border: 1px solid rgba(69, 133, 93, 0.2);
+  border-left: 4px solid rgba(69, 133, 93, 1);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.demo-section:hover {
+  background: rgba(69, 133, 93, 0.08);
+  border-color: rgba(69, 133, 93, 0.3);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(69, 133, 93, 0.1);
+}
+
+.demo-section h2 {
+  color: rgba(69, 133, 93, 1);
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.demo-section p {
+  color: #34495e;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/******************************************************* Responsive Design *******************************************************/
+@media (max-width: 768px) {
+  .mini-website {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+
+  .mini-website header {
+    padding: 1.5rem 2rem;
+  }
+
+  .mini-website header h1 {
+    font-size: 1.5rem;
+  }
+
+  .mini-website header h2 {
+    font-size: 0.9rem;
+  }
+
+  .mini-website main {
+    padding: 2rem;
+  }
+
+  .mini-website main h1 {
+    font-size: 1.25rem;
+  }
+
+  .mini-website footer {
+    padding: 1.25rem 2rem;
+  }
+
+  .mini-website footer::before {
+    left: 0.75rem;
+  }
+
+  /********************************* Demo Header *********************************/
+
+  .demo-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .demo-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .demo-header h2 {
+    font-size: 0.9rem;
+  }
+
+  /***************DEMO NAVIGATION WITHIN MINI-WEBSITE ******************/
+
+  .demo-nav {
+    padding: 0.75rem;
+    gap: 0.375rem;
+    max-width: 100%;
+  }
+
+  .demo-nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+  }
+
+  /**************** Demo Article and Sections within mini-website **************/
+
+  .mini-website .demo-article,
+  .mini-website .demo-section {
+    padding: 1.25rem;
+    margin: 0.75rem 0;
+  }
+
+  .mini-website .demo-article::before,
+  .mini-website .demo-section::before {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mini-website {
+    margin: 0.5rem auto;
+    border-radius: 8px;
+  }
+
+  .mini-website header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .mini-website header h1 {
+    font-size: 1.25rem;
+  }
+
+  .mini-website header h2 {
+    font-size: 0.85rem;
+  }
+
+  .mini-website main {
+    padding: 1.5rem;
+  }
+
+  .mini-website main h1 {
+    font-size: 1.125rem;
+  }
+
+  .mini-website main p {
+    font-size: 0.9rem;
+  }
+
+  .mini-website footer {
+    padding: 1rem 1.5rem;
+  }
+
+  /***************DEMO NAVIGATION WITHIN MINI-WEBSITE ******************/
+  .demo-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .demo-nav-link {
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  /**************** Demo Article and Sections within mini-website **************/
+
+  .mini-website .demo-article,
+  .mini-website .demo-section {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .mini-website .demo-article::before,
+  .mini-website .demo-section::before {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .mini-website::after {
+    top: 6px;
+    left: 0.75rem;
+    width: 8px;
+    height: 8px;
+    box-shadow: 14px 0 0 #ffbd2e, 28px 0 0 #28ca42;
+  }
+}

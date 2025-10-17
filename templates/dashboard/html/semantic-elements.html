@@ -66,10 +66,13 @@
                 </div>
 
                 <div class="demo-example">
-                    <header class="demo-header">
-                        <h1>FrontEnd Insights</h1>
-                        <h2>Resource for modern Front-End web development</h2>
-                    </header>
+                    <div class="mini-website">
+                        {% include 'dashboard/mini-website-header.html' %}
+
+                        <main>
+                            <p>Website content goes here...</p>
+                        </main>
+                    </div>
                 </div>
 
             </div>
@@ -134,12 +137,20 @@
                 </div>
 
                 <div class="demo-example">
-                    <nav class="demo-nav">
-                        <a class="demo-nav-link demo-active" href="">Home</a>
-                        <a class="demo-nav-link" href="">About</a>
-                        <a class="demo-nav-link" href="">Services</a>
-                        <a class="demo-nav-link" href="">Contact</a>
-                    </nav>
+
+                    <div class="mini-website">
+                        {% include 'dashboard/mini-website-header.html' %}
+
+                        <nav class="demo-nav">
+                            <a class="demo-nav-link demo-active">Home</a>
+                            <a class="demo-nav-link">About</a>
+                            <a class="demo-nav-link">Services</a>
+                            <a class="demo-nav-link">Contact</a>
+                        </nav>
+                        <main>
+                            <p>Website content goes here...</p>
+                        </main>
+                    </div>
 
                 </div>
             </div>
@@ -198,7 +209,17 @@
                 </div>
 
                 <div class="demo-example">
+                    <div class="mini-website">
+                        {% include 'dashboard/mini-website-header.html' %}
 
+                        <main>
+                            <h1>Welcome to Our Website</h1>
+                            <p>Here is the main content of the page...</p>
+                        </main>
+                        <footer>
+                            <p>&copy; 2024 FrontEnd Insights. All rights reserved.</p>
+                        </footer>
+                    </div>
                 </div>
 
             </div>
@@ -284,7 +305,20 @@
                 </div>
 
                 <div class="demo-example">
+                    <div class="mini-website">
+                        {% include 'dashboard/mini-website-header.html' %}
+                        <main>
+                            <article class="demo-article">
+                                <h2>News Story 1</h2>
+                                <p>Here is the story content...</p>
+                            </article>
 
+                            <article class="demo-article">
+                                <h2>News Story 2</h2>
+                                <p>Here is the story content...</p>
+                            </article>
+                        </main>
+                    </div>
                 </div>
 
             </div>
@@ -307,6 +341,23 @@
 
                 <div class="demo-example">
 
+                    <div class="mini-website">
+                        {% include 'dashboard/mini-website-header.html' %}
+                        <main>
+                            <section class="demo-section">
+                                <h2>Our Products</h2>
+                                <p>this is the section about our products...</p>
+                            </section>
+
+                            <section class="demo-section">
+                                <h2>Our Team</h2>
+                                <p>this is the section about our team...</p>
+                            </section>
+                        </main>
+                    </div>
+
+                    
+
                 </div>
 
             </div>
@@ -326,733 +377,7 @@
 
         </article>
 
-
-        <!-- ARTICLE: ASIDE Element Demo -->
-        <article id="aside-element" class="concept-container">
-            <!------------ HEADER ------------>
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;aside&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>used to represent content that is related to the main content but is not essential to
-                                its understanding</li>
-                            <li>often contains sidebars, pull quotes, advertisements or other tangentially related
-                                information</li>
-                            <li>can improve accessibility by providing additional context or information</li>
-                            <li>helps search engines understand the structure of the page and the relationship between
-                                different content</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </header>
-
-            <!------------ DEMO EXAMPLE ------------>
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;aside&gt;<br>
-                        &nbsp;&nbsp;&lt;h4&gt;Related&lt;/h4&gt;<br>
-                        &nbsp;&nbsp;&lt;p&gt;Content...&lt;/p&gt;<br>
-                        &lt;/aside&gt;
-                    </div>
-                </div>
-
-                <div class="demo-example">
-
-                </div>
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use &lt;aside&gt; for tangentially related content</li>
-                        <li>Keep &lt;aside&gt; content concise and relevant</li>
-                        <li>Can be used multiple times per page</li>
-                    </ul>
-                </div>
-            </div>
-
-        </article>
-
-        <!-- ARTICLE: TIME Element Demo -->
-        <article id="time-element" class="concept-container">
-            <!------------ HEADER ------------>
-            <header class="concept-header">
-
-                <div class="demo-grid demo-grid-intro">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;time&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>used to represent a represent a specific period in time</li>
-                            <li>can include dates, times, or durations</li>
-                            <li>primary purpose of this element is to provide a machine-readable format of the date or
-                                time for applications like screen readers or search engines</li>
-                            <li><strong>datetime attribute</strong> is crucial for providing a machine-readable format
-                                of the date or time</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </header>
-
-            <!------------ TIME STRING DEMO GRID ------------>
-            <h5>The datetime attribute of the HTML <time> element can represent a duration using the ISO 8601 duration
-                    format.</h5>
-            <br>
-            <p><mark>P[nD][T[nH][nM][nS]]</mark></p>
-
-            <!------------ DEMO EXAMPLE ------------>
-            <div class="demo-examples">
-                <div class="demo-examples-container">
-                    <!------------ YEAR STRING CODE EXAMPLE ------------>
-                    <div class="demo-example">
-                        <p>Valid year string: YYYY (e.g., 2025)</p>
-                        <div class="code-example">
-                            &lt;p&gt;<br>
-                            &nbsp;&nbsp;You must be born before<br> &lt;time datetime="2003"&gt;2003&lt;/time&gt; to
-                            enter. <br>
-                            &lt;/p&gt;
-                        </div>
-                    </div>
-
-                    <!------------ MONTH STRING CODE EXAMPLE ------------>
-                    <div class="demo-example">
-                        <p>Valid month string: YYYY-MM (e.g., 2025-12)</p>
-                        <div class="code-example">
-                            &lt;p&gt;<br>
-                            &nbsp;&nbsp;The event ends in<br> &lt;time datetime="2026-02"&gt;February 2026&lt;/time&gt;.
-                            <br>
-                            &lt;/p&gt;
-                        </div>
-                    </div>
-
-                    <!------------ DATE STRING DEMO GRID ------------>
-                    <div class="demo-example">
-                        <p>Valid date string: YYYY-MM-DD (e.g., 2025-12-25)</p>
-                        <div class="code-example">
-                            &lt;p&gt;<br>
-                            &nbsp;&nbsp;The event starts on<br> &lt;time datetime="2025-12-25"&gt;December 25th,
-                            2025&lt;/time&gt;. <br>
-                            &lt;/p&gt;
-                        </div>
-                    </div>
-
-                    <div>
-
-                    </div>
-                </div>
-
-                <div class="demo-examples-container">
-
-                    <!------------ TIME STRING CODE EXAMPLE ------------>
-                    <div class="demo-example">
-                        <p>Valid time string: HH:MM (e.g., 14:30)</p>
-                        <div class="code-example">
-                            &lt;p&gt;<br>
-                            &nbsp;&nbsp;The meeting is scheduled for <br> &lt;time datetime="14:30"&gt;2:30
-                            pm&lt;/time&gt;.<br>&lt;/p&gt;
-                        </div>
-                    </div>
-
-                    <!------------ TIME STRING CODE EXAMPLE ------------>
-                    <div class="demo-example">
-                        <p>Valid time string: HH:MM:SS (e.g., 14:30:00)</p>
-                        <div class="code-example">
-                            &lt;p&gt;<br>
-                            &nbsp;&nbsp;The meeting is scheduled for <br> &lt;time datetime="14:30:00"&gt;2:30
-                            pm&lt;/time&gt;.<br>&lt;/p&gt;
-                        </div>
-                    </div>
-
-                    <!------------ TIME STRING CODE EXAMPLE ------------>
-                    <div class="demo-example">
-                        <p>Valid time string: HH:MM:SSZ (e.g., 14:30:00Z for UTC time)</p>
-                        <div class="code-example">
-                            &lt;p&gt;<br>
-                            &nbsp;&nbsp;The meeting is scheduled for <br> &lt;time datetime="14:30:00Z"&gt;2:30
-                            pm&lt;/time&gt;.<br>&lt;/p&gt;
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Always include the <strong>datetime</strong> attribute</li>
-                        <li>Use a machine-readable format (e.g., YYYY-MM-DD)</li>
-                        <li>Provide human-readable text within the element</li>
-                    </ul>
-                </div>
-            </div>
-
-
-        </article>
-
-
-        <!-- ARTICLE: ADDRESS Element Demo -->
-        <article id="address-element" class="concept-container">
-            <!------------ HEADER ------------>
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;address&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>used to provide contact information for the nearest ancestor</li>
-                            <li>typically relates to the author, owner, or maintainer of the content</li>
-                            <li>improves accessibility by clearly indicating contact information to assistive
-                                technologies</li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-
-
-            <!------------ DEMO EXAMPLE ------------>
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;address&gt;<br>
-                        &nbsp;&nbsp;123 South St.<br>
-                        &nbsp;&nbsp;Leedsville, AL 52486<br>
-                        &nbsp;&nbsp;Email: &lt;a href="mailto:info@email.com"&gt;info@email.com&lt;/a&gt;<br>
-                        &lt;/address&gt;
-
-                    </div>
-                </div>
-
-                <div class="demo-example">
-                    <address class="demo-address">
-                        123 South St.<br>
-                        Leedsville, AL 52486<br>
-                        Email: <a href="mailto:info@email.com">info@email.com</a><br>
-                    </address>
-                </div>
-
-            </div>
-
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use for contact information of the nearest ancestor</li>
-                        <li>Can include physical address, email, phone number, etc.</li>
-                        <li>Should not be used for arbitrary addresses or locations</li>
-                    </ul>
-                </div>
-            </div>
-
-        </article>
-
-
-        <!-- ARTICLE:FIGURE Element Demo -->
-        <article id="figure-element" class="concept-container">
-            <!------------ HEADER ------------>
-            <header class="concept-header">
-                <!------------ FIGURE ELEMENT ------------>
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;figure&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>used to represent self-contained content, such as illustrations, diagrams, or photos
-                            </li>
-                            <li>typically includes a caption or legend to describe the content</li>
-                            <li>can be referenced from the main content without disrupting the flow of the document</li>
-                            <li>improves accessibility by providing context for visual content</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!------------ FIGCAPTION ELEMENT ------------>
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;figcaption&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>used to represent the caption or legend for a &lt;figure&gt; element</li>
-                            <li>typically includes a description of the content</li>
-                            <li>must be the first child of the &lt;figure&gt; element</li>
-                            <li>improves accessibility by providing context for visual content</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </header>
-
-
-
-            <!------------ DEMO EXAMPLE ------------>
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;figure&gt;<br>
-                        &nbsp;&nbsp;&lt;img src="https://picsum.photos/200" alt="Description"&gt;<br>
-                        &nbsp;&nbsp;&lt;figcaption&gt;Caption&lt;/figcaption&gt;<br>
-                        &lt;/figure&gt;
-                    </div>
-                </div>
-
-                <div class="demo-example">
-                    <figure class="demo-figure">
-                        <img src="https://picsum.photos/200" alt="Description">
-                        <figcaption>Caption</figcaption>
-                    </figure>
-                </div>
-
-            </div>
-
-  
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h5>Best Practices:</h5>
-                    <ul>
-                        <li>Use &lt;figure&gt; for self-contained content</li>
-                        <li>Include a &lt;figcaption&gt; for descriptive text</li>
-                        <li>Ensure &lt;figure&gt; elements are referenced in the main content</li>
-                    </ul>
-                </div>
-                </div>
-        </article>
-
-
-        <!-- ARTICLE: DETAILS & SUMMARY Element Demo -->
-        <article id="details-summary-element" class="concept-container">
-
-            <!------------ HEADER ------------>
-            <header class="concept-header">
-                <h3>The &lt;details&gt; and &lt;summary&gt; elements work together to create a native disclosure widget
-                </h3>
-                <!------------ DETAILS ELEMENT ------------>
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;details&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>creates a disclosure (disclosure pattern) widget, allowing you to provide additional
-                                information that can be shown or hidden by the user</li>
-                            <li>inherently provides expand/collapse functionality, that is closed by default, without
-                                requiring JavaScript for basic operation</li>
-                            <li>use &lt;details&gt; for content that is not immediately necessary, but may be useful for
-                                users who want more information</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!------------ SUMMARY ELEMENT ------------>
-                <div class="demo-grid demo-grid-intro">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;summary&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>provides the always visible heading or title for the collapsible section</li>
-                            <li>ensure the &lt;summary&gt; element is always the first child of the &lt;details&gt;
-                                element</li>
-                            <li>can contain text, images, or other inline elements to describe the content that will be
-                                revealed</li>
-                                <li>content inside &lt;details&gt; is hidden until the user interacts with the &lt;summary&gt;</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </header>
-
-
-            <!------------ DEMO EXAMPLE ------------>
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;details&gt;<br>
-                        &nbsp;&nbsp;&lt;summary&gt;Click to reveal more details&lt;/summary&gt;<br>
-                        &nbsp;&nbsp;&lt;p&gt;Hidden Content&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&lt;ul&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                        &nbsp;&nbsp;&lt;/ul&gt;<br>
-                        &lt;/details&gt;
-                    </div>
-                </div>
-
-                <div class="demo-example">
-                        <details>
-                            <summary>Click to reveal more details</summary>
-                            <p>Hidden content </p>
-                            <ul>
-                                <li>Item 1</li>
-                                <li>Item 2</li>
-                            </ul>
-                        </details>
-                </div>
-
-            </div>
-
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                            &lt;details open&gt;<br>
-                            &nbsp;&nbsp;&lt;summary&gt;Click to hide the visible details&lt;/summary&gt;<br>
-                            &nbsp;&nbsp;&lt;p&gt;The details are visible by default.&lt;/p&gt;<br>
-                            &nbsp;&nbsp;&lt;ul&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-                            &nbsp;&nbsp;&lt;/ul&gt;<br>
-                            &lt;/details&gt;
-                    </div>
-                </div>
-
-                <div class="demo-example">
-                    <details open>
-                        <summary>Click to hide the visible details</summary>
-                            <p>The details are visible by default.</p>
-                            <ul>
-                                <li>Item 1</li>
-                                <li>Item 2</li>
-                            </ul>
-                    </details>
-                </div>
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use &lt;details&gt; for optional or supplementary content</li>
-                        <li>Ensure &lt;summary&gt; is descriptive and concise</li>
-                        <li>Can be used multiple times per page</li>
-                    </ul>
-                </div>
-            </div>
-
-
-        </article>
-
-        <!-- ARTICLE: CITATION Element Demo -->
-        <article id="citation-element" class="concept-container">
-            <!--------- CITATIONS HEADER ------------>
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;cite&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>the citation element is used to define the title of a creative work, such as a book,
-                                article, song, movie, or website</li>
-                            <li>is typically rendered in italics by browsers</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </header>
-
-            <!------------ CITATIONS DEMO GRID ------------>
-
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;p&gt;<br>My favorite movie is &lt;cite&gt;Where The Heart Is&lt;/cite&gt; staring Natalie
-                        Portman.<br>&lt;/p&gt;
-                    </div>
-                </div>
-                <!------------ BEST PRACTICES ------------>
-                <div class="demo-example">
-                    <p class="simple-demo">My favorite movie is <cite>Where The Heart Is</cite> staring Natalie Portman.</p>
-                </div>
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use &lt;cite&gt; for titles of creative works</li>
-                        <li>Can include books, articles, songs, movies, websites, etc.</li>
-                        <li>Should not be used for authors or creators' names</li>
-                    </ul>
-                </div>
-        </article>
-
-
-        <!-- ARTICLE:INLINE QUOTE Element Demo -->
-        <article id="inline-quote-element" class="concept-container">
-            <!------------ INLINE QUOTE HEADER ------------>
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;q&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>the inline quotation element is used for short, inline quotations that do not require
-                                paragraph breaks</li>
-                            <li>typically relates to the author, owner, or maintainer of the content</li>
-                            <li>browsers typically render the enclosed text with quotation marks</li>
-                            <li>can include a cite attribute, which provides a URL pointing to the source document or
-                                message for the quoted content</li>
-                            <li>the cite attribute is primarily for machine readability and is not directly displayed to
-                                the user</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </header>
-
-            <!------------ INLINE QUOTE DEMO GRID ------------>
-            <div class="demo-examples">
-
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;p&gt;Someone yelled,&lt;q&gt;FIRE&lt;/q&gt; and everyone ran.&lt;/p&gt;
-                    </div>
-                </div>
-                <!------------ BEST PRACTICES ------------>
-                <div class="demo-example">
-                    <p class="simple-demo">Someone yelled, <q>FIRE</q> and everyone ran.</p>
-                </div>
-
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use &lt;q&gt; for short, inline quotations</li>
-                        <li>Include the &lt;q&gt; element within a block-level element like &lt;p&gt;</li>
-                        <li>Can be nested for quotes within quotes</li>
-                    </ul>
-                </div>
-        </article>
-
-        <!-- ARTICLE: BLOCKQUOTE Element Demo -->
-        <article id="blockquote-element" class="concept-container">
-            <!------------ BLOCKQUOTE HEADER ------------>
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;blockquote&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>the block quotation element is used for longer quotations that require paragraph breaks,
-                                displayed as a separate block, often with indentation</li>
-                            <li>can include a cite attribute, which provides a URL pointing to the source document or
-                                message for the quoted content</li>
-                            <li>the cite attribute is primarily for machine readability and is not directly displayed to
-                                the user</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </header>
-
-
-            <!------------ BLOCKQUOTE DEMO EXAMPLES ------------>
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;blockquote&gt;<br>
-                        &nbsp;&lt;p&gt;
-                        <br>&nbsp;&nbsp;&nbsp;Butterflies go through four major stages of metamorphosis:<br>&nbsp;&nbsp;
-                        egg, caterpillar,
-                        chrysalis and adult.<br>
-                        &nbsp;&lt;/p&gt;<br>
-                        &nbsp;&lt;footer&gt;<br>
-                        &nbsp;&nbsp;&lt;cite title="The Butterfly Website"&gt;<br>
-                        &nbsp;&nbsp; The Butterfly Website<br>
-                        &nbsp;&nbsp;&lt;/cite&gt;<br>
-                        &nbsp;&lt;/footer&gt;<br>
-                        &lt;/blockquote&gt;
-                    </div>
-                </div>
-
-                <div class="demo-example">
-                    <blockquote class="demo-blockquote">
-                        <p>"Butterflies go through four major stages of metamorphosis: egg, caterpillar,
-                            chrysalis and adult."</p>
-                        <footer>
-                            <cite title="The Butterfly Website">The Butterfly Website</cite>
-                        </footer>
-                    </blockquote>
-                </div>
-
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use &lt;blockquote&gt; for longer quotations</li>
-                        <li>Include a &lt;footer&gt; with a &lt;cite&gt; for the source</li>
-                        <li>Can contain multiple paragraphs and other block-level elements</li>
-                    </ul>
-                </div>
-
-        </article>
-
-
-        <!-- ARTICLE: DEFINITION LIST Element Demo -->
-        <article id="definition-list-element" class="concept-container">
-            <!------------ DEFINITION LIST HEADER ------------>
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                    <!------------ ELEMENT ------------>
-                    <div class="element">
-                        <h2>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</h2>
-                    </div>
-                    <!------------ ELEMENT INFO ------------>
-                    <div class="element-info">
-                        <ul>
-                            <li>the definition list elements are used to create a list of terms and their corresponding
-                                definitions or descriptions</li>
-                            <li>&lt;dl&gt; is the container for the entire list, &lt;dt&gt; defines each term, and &lt;dd&gt;
-                                provides the definition or description for that term</li>
-                            <li>can be used for glossaries, FAQs, or any situation where terms need to be defined</li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-                <!------------ DEFINITION LIST DEMO EXAMPLES ------------>
-            <div class="demo-examples">
-                <div class="demo-example">
-                    <!------------ CODE EXAMPLE ------------>
-                    <div class="code-example">
-                        &lt;dl&gt;<br>
-                        &nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>
-                        &nbsp;&nbsp;&lt;dd&gt;HyperText Markup Language&lt;/dd&gt;<br><br>
-                        &nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>
-                        &nbsp;&nbsp;&lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;<br><br>
-                        &nbsp;&nbsp;&lt;dt&gt;JS&lt;/dt&gt;<br>
-                        &nbsp;&nbsp;&lt;dd&gt;JavaScript&lt;/dd&gt;<br>
-                        &lt;/dl&gt;
-                    </div>
-                </div>
-                <div class="demo-example">
-                    <dl class="demo-dl">
-                        <dt>HTML</dt>
-                        <dd>HyperText Markup Language</dd>
-                        <dt>CSS</dt>
-                        <dd>Cascading Style Sheets</dd>
-                        <dt>JS</dt>
-                        <dd>JavaScript</dd>
-                    </dl>
-                </div>
-            </div>
-            
-            <!------------ BEST PRACTICES ------------>
-            <div class="best-practices">
-                <div>
-                    <h2>Best Practices</h2>
-                    <ul>
-                        <li>Use &lt;dl&gt; to group terms and definitions</li>
-                        <li>Each term should be wrapped in &lt;dt&gt; and its definition in &lt;dd&gt;</li>
-                        <li>Can contain multiple &lt;dt&gt; and &lt;dd&gt; pairs</li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-
-        <!-- ARTICLE: Text-level Semantic Elements -->
-        <article id="text-level-elements" class="concept-container">
-            <!------------ HEADER ------------>
-            <header class="concept-intro-header">
-                <h2>Text-Level Semantic Elements</h2>
-                <p>Text-level semantic elements provide meaning to inline content, enhancing the structure and
-                    readability of text.</p>
-                <p>Help convey the importance, emphasis, or role of specific text within a document.</p>
-                <p>If there is no semantic purpose, do not use these elements for purely presentational reasons.</p>
-                <br>
-            </header>
-
-            <!------------ DEMO GRID ------------>
-            <div class="grid-two">
-
-                <div class="grid-two-item">
-                    <p><span class="tag">&lt;strong&gt;</span> : <strong>Indicates strong importance, seriousness, or
-                            urgency for its contents</strong></p>
-                    <br>
-                    <p><span class="tag">&lt;em&gt;</span> : <em>Indicates emphasized text, typically displayed in
-                            italics.</em></p>
-                    <br>
-                    <p><span class="tag">&lt;mark&gt;</span> : <mark>Highlights text for reference or emphasis.</mark>
-                    </p>
-                    <br>
-                    <p><span class="tag">&lt;small&gt;</span> : <small>Renders text in a smaller font size, often for
-                            fine print.</small></p>
-                    <br>
-                    <p><span class="tag">&lt;cite&gt;</span> : <cite>Indicates the title of a creative work, like a book
-                            or song.</cite></p>
-                </div>
-
-                <div class="grid-two-item">
-                    <p><span class="tag">&lt;abbr&gt;</span> : for <abbr title="HyperText Markup Language">HTML</abbr>
-                        abbreviations</p>
-                    <br>
-                    <p><span class="tag">&lt;code&gt;</span> : for <code>inline code</code></p>
-                    <br>
-                    <p><span class="tag">&lt;kbd&gt;</span> : for <kbd>Ctrl+C</kbd> keyboard input</p>
-                    <br>
-                    <p><span class="tag">&lt;var&gt;</span> : for <var>variables</var> in code</p>
-                    <br>
-                    <p><span class="tag">&lt;s&gt;</span> : <s>Represents text that is no longer accurate or
-                            relevant.</s></p>
-                </div>
-
-            </div>
-
-        </article>
+ 
     </div>
 
 </main>
