@@ -1,0 +1,54 @@
+
+{% macro render_concept(element_name, concept_description, best_practices) %}
+            <!------------ HEADER ------------>
+            {{ render_concept_header(element_name, concept_description) }}
+
+            <div class="examples">
+                <div class="demo-example-pair">
+
+                        {{ caller() }}
+
+                </div>
+
+            </div>
+
+            <!------------ BEST PRACTICES ------------>
+            {{ render_best_practices(best_practices) }}
+
+    {% endmacro %}
+
+
+{% macro render_concept_header(element_name, concept_description) %}
+<header class="concept-header">
+    <div class="concept-header-grid">
+        <!------------ ELEMENT ------------>
+        <div class="element">
+            <h2>&lt;{{ element_name }}&gt;</h2>
+        </div>
+
+        <!------------ ELEMENT INFO ------------>
+        <div class="element-info">
+            <ul>
+                {% for description in concept_description %}
+                <li>{{ description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</header>
+{% endmacro %}
+
+{% macro render_best_practices(best_practices) %}
+<!-- Best Practices -->
+<div class="best-practices">
+    <div>
+        <h2>Best Practices</h2>
+        <ul>
+            {% for practice in best_practices %}
+            <li>{{ practice }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}
+

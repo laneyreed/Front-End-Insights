@@ -85,7 +85,7 @@
 }
 
 
-.demo-examples {
+.demo-example-pair {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;

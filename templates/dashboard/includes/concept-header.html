@@ -1,0 +1,30 @@
+<!------------ CONCEPT HEADER ------------>
+<header class="concept-header">
+    <div class="concept-header-grid">
+        <!------------ ELEMENT ------------>
+        <div class="element">
+            <h2>&lt;{{ element_name }}&gt;</h2>
+        </div>
+
+
+        <div class="element-info">
+        {% block concept_header_extra %}
+
+                    
+            <ul>
+                <li>used to represent introductory content or a group of navigational links for a section of
+                    a
+                    document or the entire document</li>
+                <li>improves accessibility and SEO by explicitly indicating to browsers and search engines
+                    that
+                    the enclosed content is introductory or navigational</li>
+                <li>commonly found at the top of a webpage, but can also be used within other sectioning
+                    elements like &lt;article&gt; or &lt;section&gt; to provide a header for that specific
+                    section</li>
+                <li>helps organize the document's structure, making the HTML code cleaner and more readable
+                </li>
+            </ul>
+        {% endblock concept_header_extra %}
+        </div>
+    </div>
+</header>
