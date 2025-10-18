@@ -10,6 +10,8 @@
     <div class="dashboard-container">
         {% include 'dashboard/sidebar.html' %}
          
+<!-- Conditional content includes based on request parameters -->
+        <!-- HTML Content Area -->
         {% if request.args.get('concept') == 'Semantic Elements' %}
             {% include 'dashboard/html/semantic-elements.html' %}
         {% elif lang|lower() == 'html' %}
@@ -18,8 +20,19 @@
 
 
 
+        <!-- CSS Content Area -->
+        {% if lang|lower() == 'css' %}
+            {% include 'dashboard/css/css-home.html' %}
+        {% endif %}
 
-        
+
+        <!-- JavaScript Content Area -->
+        {% if lang|lower() == 'javascript' %}
+            {% include 'dashboard/javascript/javascript-home.html' %}
+        {% endif %}
+
+
+        <!-- Python Content Area -->
         {% if lang|lower() == 'python' %}
             {% include 'dashboard/python/python-home.html' %}
         {% endif %}
@@ -27,13 +40,7 @@
 
 
 
-        {% if lang|lower() == 'css' %}
-            {% include 'dashboard/css/css-home.html' %}
-        {% endif %}
 
 
-        {% if lang|lower() == 'javascript' %}
-            {% include 'dashboard/javascript/javascript-home.html' %}
-        {% endif %}
     </div>
 {% endblock main %}
