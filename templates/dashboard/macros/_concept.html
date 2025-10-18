@@ -16,14 +16,29 @@
 
     <div class="concept-content-container">
         {% for detail in concept_details %}
-         <!-- ARTICLE: Header Element Demo -->
-         <article id="header-element">
+         <!-- ARTICLE: Element Demo -->
+         <article id="{{ detail[0] }}-element">
             <header class="concept-header">
                 <div class="concept-header-grid">
+                <div class="tag">
                     <!------------ TAG ------------>
-                    <div class="tag">
-                        <h2>{{ detail[0] }}</h2>
-                        <p> {{ detail[1] }}</p>
+                    {% if 'figure' in detail[0] %}
+                    <div class="tag-intro-group">
+                            {{ detail[0]|safe }}
+                    </div>
+                    {% else %}
+                      
+                            <h2 class="tag-h2">{{ detail[0] }}</h2>
+                        
+                    {% endif %}
+
+
+                    
+                        {% if 'figure' in detail[1] %}
+                        <div class="tag-intro-group">{{ detail[1]|safe }}</div>
+                        {% else %}
+                            <p class="tag-p">{{ detail[1] }}</p>
+                        {% endif %}
                     </div>
                 </div>
             </header>
@@ -39,9 +54,7 @@
                 <div class="mini-website">
                         {% include 'dashboard/includes/mini-website-header.html' %}
 
-                        <main>
-                            <p>Website content goes here...</p>
-                        </main>
+
                 </div>
 
          </article>

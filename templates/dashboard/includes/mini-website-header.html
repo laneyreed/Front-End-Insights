@@ -2,3 +2,51 @@
     <h1>FrontEnd Insights</h1>
     <h2>Resource for modern Front-End web development</h2>
 </header>
+{% if detail[0] == '<nav>' %}
+    <nav class="demo-nav">
+        <a class="demo-nav-link demo-active">Home</a>
+        <a class="demo-nav-link">About</a>
+        <a class="demo-nav-link">Services</a>
+        <a class="demo-nav-link">Contact</a>
+    </nav>
+{% endif %}
+<main>
+    {% if detail[0] == '<main>' %}
+    <h1>Welcome to Our Website</h1>
+    <p>Here is the main content of the page...</p>
+    {% elif detail[0] == '<article>' %}
+        <article>
+            <h2>Understanding Semantic HTML</h2>
+            <p>Semantic HTML elements clearly describe their meaning...</p>
+        </article>
+        <article>
+            <h2>The Importance of Accessibility</h2>
+            <p>Making your website accessible to all users is crucial...</p>
+        </article>
+    {% elif detail[0] == '<section>' %}
+        <section>
+            <h2>Features of Our Product</h2>
+            <p>Our product offers a range of features...</p>
+        </section>
+        <section>
+            <h2>Benefits of Using Our Product</h2>
+            <p>Using our product can help you achieve your goals more efficiently...</p>
+        </section>
+    {% elif detail[0] == '<aside>' %}
+        <aside>
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+    {% else %}
+    <p>Website content goes here...</p>
+    {% endif %}
+</main>
+{% if detail[0] == '<footer>' %}
+    <footer>
+        <p>Copyright © 2025 FrontEnd Insights. All rights reserved.</p>
+    </footer>
+{% endif %}

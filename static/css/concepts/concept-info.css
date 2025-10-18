@@ -43,6 +43,7 @@
   border: 1px solid rgba(69, 133, 93, 0.2);
   display: inline-block;
   position: relative;
+
 }
 
 .tag h2::after {
@@ -57,7 +58,22 @@
   border-radius: 1px;
 }
 
-.tag p {
+.tag-intro-group{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.tag-intro-group p {
+  width: 40%;
+  color: #34495e;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1;
+  margin: 0;
+  font-weight: 400;
+}
+
+.tag .tag-p {
   color: #34495e;
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   line-height: 1.6;
