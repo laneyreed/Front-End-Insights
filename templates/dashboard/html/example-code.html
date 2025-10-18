@@ -77,7 +77,41 @@
     &nbsp;&nbsp;&lt;p&gt;Web development is an ever-evolving field that requires continuous learning and adaptation.&lt;/p&gt;<br>
     &nbsp;&nbsp;&lt;footer&gt;- FrontEnd Insights&lt;/footer&gt;<br>
     &lt;/blockquote&gt;
-    
-{% else%}
+
+{% elif detail[0] == '<time>' %} <!-- Time Element Code Demo -->
+    &lt;p&gt;The event will take place on &lt;time datetime="2025-12-31"&gt;December 31, 2025&lt;/time&gt;.&lt;/p&gt;   
+ 
+{% elif detail[0] == '<address>' %} <!-- Address Element Code Demo -->
+    &lt;address&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Contact us at:&lt;/p&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;123 Main St, Anytown, USA&lt;/p&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Email: info@example.com&lt;/p&gt;<br>
+    &lt;/address&gt;
+
+{% elif detail[0] == '<h2>dl</h2><h2>dt</h2><h2>dd</h2><h2>dfn</h2>' %} <!-- Description List Element Code Demo -->
+    &lt;dl&gt;<br>
+    &nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;HyperText Markup Language&lt;/dd&gt;<br>
+    &nbsp;&nbsp;&lt;dfn&gt;the standard markup language for documents designed to be displayed in a web browser&lt;/dfn&gt;<br>
+    &nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;<br>
+    &nbsp;&nbsp;&lt;dfn&gt;a style sheet language used for describing the presentation of a document written in a markup language like HTML&lt;/dfn&gt;<br>
+    &nbsp;&nbsp;&lt;dt&gt;JavaScript&lt;/dt&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Programming language for the web&lt;/dd&gt;<br>
+    &nbsp;&nbsp;&lt;dfn&gt;a programming language that conforms to the ECMAScript specification and is used to create dynamic website content&lt;/dfn&gt;<br>
+    &lt;/dl&gt;
+
+{% elif detail[0] == 'Text-Level Semantic Elements' %} <!-- Text-Level Semantic Elements Code Demo -->
+    &lt;p&gt; &lt;strong&gt;&lt;strong&gt;&lt;/strong&gt; indicates strong importance &lt;/p&gt;
+    &lt;p&gt; &lt;em&gt;&lt;em&gt;&lt;/em&gt; adds emphasis to text &lt;/p&gt;
+    &lt;p&gt; &lt;mark&gt;&lt;/mark&gt; highlights text for reference &lt;/p&gt;
+    &lt;p&gt; &lt;small&gt;&lt;/small&gt; creates small text &lt;/p&gt;
+    &lt;p&gt; &lt;abbr&gt;&lt;/abbr&gt; represents an abbreviation or acronym &lt;/p&gt;
+    &lt;p&gt; &lt;s&gt;&lt;/s&gt; represents text that is no longer accurate or relevant &lt;/p&gt;
+    &lt;p&gt; &lt;var&gt;&lt;/var&gt; represents a variable in a mathematical expression or programming context &lt;/p&gt;
+    &lt;p&gt; &lt;kbd&gt;&lt;/kbd&gt; represents user input in a keyboard context &lt;/p&gt;
+    &lt;p&gt; &lt;code&gt;&lt;/code&gt; represents a code snippet or example &lt;/p&gt;
+
+{% else %}
     <p>No Code Found</p>
 {% endif %}

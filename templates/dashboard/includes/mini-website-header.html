@@ -66,6 +66,64 @@
             <summary>More Information</summary>
             <p>Here is some additional information that can be revealed by clicking the summary.</p>
         </details>
+    
+    <!-- ARTICLE: CITE Element Demo -->
+    {% elif detail[0] == '<cite>' %}
+        <p><cite>The Great Gatsby</cite> by F. Scott Fitzgerald is a classic novel that explores themes of decadence, idealism, and excess in 1920s America.</p>
+    
+    <!-- ARTICLE: Q Element Demo -->
+    {% elif detail[0] == '<q>' %}
+        <p>As Albert Einstein once said, <q>Imagination is more important than knowledge.</q></p>
+    
+    <!-- ARTICLE: BLOCKQUOTE Element Demo -->
+    {% elif detail[0] == '<blockquote>' %}
+        <blockquote>
+            <p>The only limit to our realization of tomorrow is our doubts of today.</p>
+            <footer>— Franklin D. Roosevelt</footer>
+        </blockquote>
+
+    <!-- ARTICLE: TIME Element Demo -->
+    {% elif detail[0] == '<time>' %}
+        <time datetime="2025-12-31">December 31, 2025</time>
+
+
+    <!-- ARTICLE: ADDRESS Element Demo -->
+    {% elif detail[0] == '<address>' %}
+        <address>
+            Contact us at:<br>
+            FrontEnd Insights<br>
+            123 Web Dev Lane<br>
+            Code City, 45678<br>
+            Email:
+            <a href="mailto:info@frontendinsights.com">info@frontendinsights.com</a>
+        </address>
+
+    <!-- ARTICLE: DL Element Demo -->
+    {% elif detail[0] == '<h2>dl</h2><h2>dt</h2><h2>dd</h2><h2>dfn</h2>' %}
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dfn>the standard markup language for documents designed to be displayed in a web browser</dfn>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+            <dfn>a style sheet language used for describing the presentation of a document written in a markup language like HTML</dfn>
+            <dt>JS</dt>
+            <dd>JavaScript</dd>
+            <dfn>a programming language that conforms to the ECMAScript specification and is used to create dynamic website content</dfn>
+        </dl>
+
+    <!-- ARTICLE: Text-Level Semantic Elements Demo -->
+    {% elif detail[0] == 'Text-Level Semantic Elements' %}
+        <p><strong>&lt;strong&gt;</strong> indicates strong importance</p>
+        <p><em>&lt;em&gt;</em> adds emphasis to text</p>
+        <p><mark>&lt;mark&gt;</mark> highlights text for reference</p>
+        <p><small>&lt;small&gt;</small> creates small text.</p>
+        <p><abbr>&lt;abbr&gt;</abbr> represents an abbreviation or acronym.</p>
+        <p><s>&lt;s&gt;</s> represents text that is no longer accurate or relevant.</p>
+        <p><var>&lt;var&gt;</var> represents a variable in a mathematical expression or programming context.</p>
+        <p><kbd>&lt;kbd&gt;</kbd> represents user input in a keyboard context.</p>
+        <p><code>&lt;code&gt;</code> represents a code snippet or example.</p>
+
     {% else %}
     <p>Website content goes here...</p>
     {% endif %}

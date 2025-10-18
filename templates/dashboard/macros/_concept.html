@@ -1,4 +1,4 @@
-{% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details, best_practices) %}
+{% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details) %}
 <main class="concept-main">
 
     <div class="main-concept-heading-container">
@@ -58,18 +58,21 @@
                             {% include 'dashboard/includes/mini-website-header.html' %}
                     </div>
                 </div>
+
+                <div class="best-practices">
+                    <div>
+                        <h2>Best Practices</h2>
+                        <ul>
+                            {% for practice in detail[2] %}
+                            <li>{{ practice }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </article>
+
         {% endfor %}
-        <div class="best-practices">
-            <div>
-                <h2>Best Practices</h2>
-                <ul>
-                    {% for practice in best_practices %}
-                    <li>{{ practice }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+
     </div>
 </main>
 
