@@ -1,77 +1,29 @@
+{% from "./dashboard/macros/_lang-home.html" import render_lang_home %}
 <!-- Main Content Home -->
-<main class="main-content">
-    <div class="content-header">
-        <h1 id="page-title">{{ lang }}</h1>
-    </div>
-    <!-- Python can be used for frontend development, although it is not the traditional or most common choice. Frontend development primarily relies on HTML, CSS, and JavaScript, which are natively understood by web browsers. Python, on the other hand, is a server-side language.
-However, several approaches and frameworks allow Python to be used in frontend development: -->
+ <!-- lang, intro_h3, intro_text, lang_concepts_intro, lang_concepts -->
+    {{ render_lang_home(
+    lang,
+    "Welcome to Python Insights! Here you can learn more about the complex topics in Python.",
+    [
+        "If you are not familiar with Python basics, we recommend starting with 'Python for Beginners' at ",
+        "If you have a good grasp of the basics, this is your hub for frontend development with Python skills andknowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of Python for frontend development.",
+        "Python frontend development can be achieved through various frameworks and libraries that enable the creation of dynamic user interfaces and interactive web applications."
+    ],
+    "https://www.python.org/about/gettingstarted/.",
+    "Python Frontend Development",
+    [
+        ["Templating Engines", "Explore how templating engines like Jinja2 and Django Templates allow you to generate dynamic HTML content using Python. Learn how to create reusable templates, manage template inheritance, and integrate data into your frontend views seamlessly."],
+        ["Data Processing for Frontend", "Learn how to use Python for processing and manipulating data before sending it to the frontend. This includes data cleaning, transformation, and formatting to ensure that the data is ready for display in web applications."],
+        ["File Handling & Media", "Discover how to manage file uploads, downloads, and media handling in web applications using Python. This section covers best practices for handling user-generated content, storing files securely, and serving media efficiently."],
+        ["Frontend Asset Management", "Understand how to manage frontend assets such as CSS, JavaScript, and images in Python-based web frameworks. Learn about tools and techniques for optimizing asset delivery, including bundling, minification, and caching strategies."],
+        ["PyScript", "Dive into PyScript, a framework that allows you to run Python code directly in the browser. Learn how to create interactive web applications using Python for frontend logic, enabling a new way of building web interfaces."],
+        ["Python-based UI Frameworks", "Explore popular Python-based UI frameworks such as Flask, Django, and Streamlit. Learn how these frameworks enable you to build interactive and dynamic web applications with Python, leveraging its power for frontend development."]
+    ]
+    ) }}
 
-    <div class="content-body" id="content-body">
-        <!-- Dynamic content will be inserted here -->
-         <div class="intro">
-            <h3>Welcome to the {{ lang }} Insights! Here you can learn more about the complex topics in {{ lang }}.</h3>
-            <p>If you are not familiar with {{ lang }} basics, we recommend starting with {{ resources[0] }} at <a class="resource-link" href="{{ resources[1] }}" target="_blank">{{ resources[1] }}</a>.</p>
-            <p>If you have a good grasp of the basics, this is your hub for frontend development with {{ lang }} skills and knowledge.</p>
-            <p>Use this guide to explore advanced topics and deepen your understanding of {{ lang }} for frontend development.</p>
-            <p>Python frontend development can be achieved through various frameworks and libraries that enable the creation of dynamic user interfaces and interactive web applications.</p>
-        </div>
 
-        <div class="concept-intro">
-            <h3>{{ lang }} Frontend Development</h3>
-                <div class="concept-grid">
-                    <!-------------------- Templating Engines ------------------------------>
-                    <div class="concept-description">
-                        <h4>Templating Engines</h4>
-                        <p>
-                            Explore how templating engines like Jinja2 and Django Templates allow you to generate dynamic HTML content using Python. 
-                            Learn how to create reusable templates, manage template inheritance, and integrate data into your frontend views seamlessly.
-                        </p>
-                    </div>
 
-                    <!-------------------- Data Processing for Frontend ------------------------------>
-                    <div class="concept-description">
-                        <h4>Data Processing for Frontend</h4>
-                        <p>
-                            Learn how to use Python for processing and manipulating data before sending it to the frontend. 
-                            This includes data cleaning, transformation, and formatting to ensure that the data is ready for display in web applications.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="concept-grid">
-                    <!-------------------- File Handling & Media ------------------------------>
-                    <div class="concept-description">
-                        <h4>File Handling & Media</h4>
-                        <p>
-                            Discover how to manage file uploads, downloads, and media handling in web applications using Python. 
-                            This section covers best practices for handling user-generated content, storing files securely, and serving media efficiently.
-                        </p>
-                    </div>
 
-                    <!-------------------- Frontend Asset Management ------------------------------>
-                    <div class="concept-description">
-                        <h4>Frontend Asset Management</h4>
-                        <p>
-                            Understand how to manage frontend assets such as CSS, JavaScript, and images in Python-based web frameworks. 
-                            Learn about tools and techniques for optimizing asset delivery, including bundling, minification, and caching strategies.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="concept-grid">
-                    <!-------------------- PyScript ------------------------------>
-                    <div class="concept-description">
-                        <h4>PyScript</h4>
-                        <p>
-                            Dive into PyScript, a framework that allows you to run Python code directly in the browser. 
-                            Learn how to create interactive web applications using Python for frontend logic, enabling a new way of building web interfaces.
-                        </p>
-                    </div>
-
-                    <!-------------------- Python-based UI Frameworks ------------------------------>
-                    <div class="concept-description">
-                        <h4>Python-based UI Frameworks</h4>
-                        <p>Explore popular Python-based UI frameworks such as Flask, Django, and Streamlit. Learn how these frameworks enable you to build interactive and dynamic web applications with Python, leveraging its power for frontend development.</p>
-        </div>
-    </div>
-</main>

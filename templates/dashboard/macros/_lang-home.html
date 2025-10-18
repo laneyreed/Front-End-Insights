@@ -1,0 +1,35 @@
+{% macro render_lang_home(lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts) %}
+<main class="main-content">
+    <div class="content-header">
+        <h1 id="page-title">{{ lang }}</h1>
+    </div>
+
+        <div class="content-body" id="content-body">
+            <div class="intro">
+                <h3>{{ intro_h3 }}</h3>
+                {% for line in intro_text %}
+                     {% if loop.first %}
+                        {# This code will only execute for the first item in my_list #}
+                    <p>{{ line }} <a class="resource-link" href="{{ resource }}" target="_blank">{{ resource }}</a></p>
+                    {% else %}
+                    <p>{{ line }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="concepts-intro">
+            <h3>{{ lang_concepts_intro }}</h3>
+                <div class="concept-grid">
+                    {% for concept in lang_concepts %}
+                    <div class="concept-description">
+                        <h4>{{ concept[0] }}</h4>
+                        <p>{{ concept[1] }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        
+        </div>
+</main>
+    {% endmacro %}
