@@ -1,62 +1,27 @@
-{% from "dashboard/macros/_concept.html" import render_concept, render_concept_header, render_best_practices %}
-<!-- MAIN: ConceptContainer -->
-<main class="concept-main">
-    <div class="concept-heading-container">
-        <h1>{{ lang }} Semantic Elements</h1>
-    </div>
-
-<!-- SECTION: Introduction -->
-        <section class="concept-intro-container" >
-            <h2>What are Semantic Elements?</h2>
-            <p>Semantic elements clearly describe their meaning in a human and machine-readable way.</p>
-            <br>
-            <p>They provide structure and meaning to the content they enclose, improving accessibility and SEO.</p>
-            <br>
-            <p>Using semantic elements helps create a well-structured and meaningful HTML document.</p>
-        </section>
-    <div class="concept-content-container">
-         <!-- ARTICLE: Header Element Demo -->
-         <article id="header-element">
-            {% call render_concept(
-                'header',
-                'used to represent introductory content or a group of navigational links',
-                [
-                    'Use for main page headers',
-                    'Can be used multiple times per page within sections',
-                    'Avoid using for non-introductory content'
-                ]
-            ) %}
-
-            {% macro block_one() %}
-
-                <div class="html-code-container">
-                    <div class="html-code-header">Example</div>
-                    <div class="html-code-box readonly">
-<p class="html-tag">&lt;header&gt;<br></p>
-&nbsp;&nbsp;&lt;h1&gt;FrontEnd Insights&lt;/h1&gt;<br>
-&nbsp;&nbsp;&lt;h2&gt;Resource for modern Front-End web development&lt;/h2&gt;<br>
-&lt;/header&gt;
-                    </div>
-                </div>
-            {% endmacro %}
-
-            {% macro block_two() %}
-                    <div class="mini-website">
-                        {% include 'dashboard/includes/mini-website-header.html' %}
-
-                        <main>
-                            <p>Website content goes here...</p>
-                        </main>
-                    </div>
-            {% endmacro %}
+{% from "dashboard/macros/_concept.html" import render_concept %}
 
 
-            {{ block_one() }}
-            {{ block_two() }}
 
-            {% endcall %}
-         </article>
-    </div>
-
-    </div>
-</main>
+    {{ render_concept(
+    "HTML Semantic Elements",
+    "What are Semantic Elements?",
+    [
+        "Semantic elements clearly describe their meaning in a human and machine-readable way.",
+        "They provide structure and meaning to the content they enclose, improving accessibility and SEO.",
+        "Using semantic elements helps create a well-structured and meaningful HTML document."
+    ],
+    [
+    ['<header>', 'used to represent introductory content or a group of navigational links'],
+    ['<nav>', 'defines a set of navigation links'],
+    ['<main>', 'specifies the main content of a document'],
+    ['<footer>', 'defines a footer for a document or section'],
+    ['<article>', 'represents a self-contained composition in a document, page, application, or site'],
+    ['<section>', 'defines a section in a document'],
+    ['<aside>', 'represents a portion of a document whose content is only indirectly related to the document\'s main content'],
+    ],
+    [
+        'Use for main page headers',
+        'Can be used multiple times per page within sections',
+        'Avoid using for non-introductory content'
+    ]
+) }}

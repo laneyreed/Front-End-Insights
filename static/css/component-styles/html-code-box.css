@@ -27,7 +27,7 @@
 }
 
 .html-code-header::before {
-    content: "<header>";
+    content: "";
     font-weight: bold;
     font-size: 1.2em;
     color: #FFFFFF;

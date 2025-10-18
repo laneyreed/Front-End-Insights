@@ -1,38 +1,52 @@
+{% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details, best_practices) %}
+<main class="concept-main">
 
-{% macro render_concept(tag_name, tag_purpose, best_practices) %}
-            <!------------ HEADER ------------>
-            {{ render_concept_header(tag_name, tag_purpose) }}
+    <div class="concept-heading-container">
+        <h1>{{ concept_header }}</h1>
+    </div>
 
-            <div class="examples">
-                <div class="demo-example-pair">
+    <!-- SECTION: Introduction -->
+    <section class="concept-intro-container" >
+        <h2>{{ concept_intro_h2 }}</h2>
+        {% for line in concept_intro_text %}
+            <p>{{ line }}</p>
+            <br>
+        {% endfor %}
+    </section>
 
-                        {{ caller() }}
+    <div class="concept-content-container">
+        {% for detail in concept_details %}
+         <!-- ARTICLE: Header Element Demo -->
+         <article id="header-element">
+            <header class="concept-header">
+                <div class="concept-header-grid">
+                    <!------------ TAG ------------>
+                    <div class="tag">
+                        <h2>{{ detail[0] }}</h2>
+                        <p> {{ detail[1] }}</p>
+                    </div>
+                </div>
+            </header>
 
+                <div class="html-code-container">
+                    <div class="html-code-header">
+                        Example
+                    </div>
+                    <div class="html-code-box readonly">
+                        {% include 'dashboard/html/example-code.html' %}
+                    </div>
+                </div>
+                <div class="mini-website">
+                        {% include 'dashboard/includes/mini-website-header.html' %}
+
+                        <main>
+                            <p>Website content goes here...</p>
+                        </main>
                 </div>
 
-            </div>
-
-            <!------------ BEST PRACTICES ------------>
-            {{ render_best_practices(best_practices) }}
-
-    {% endmacro %}
-
-
-{% macro render_concept_header(tag_name, tag_purpose) %}
-<header class="concept-header">
-    <div class="concept-header-grid">
-        <!------------ TAG ------------>
-        <div class="tag">
-            <h2>&lt;{{ tag_name }}&gt;</h2>
-            <p> {{ tag_purpose }}</p>
-        </div>
-    </div>
-</header>
-{% endmacro %}
-
-{% macro render_best_practices(best_practices) %}
-<!-- Best Practices -->
-<div class="best-practices">
+         </article>
+            {% endfor %}
+            <div class="best-practices">
     <div>
         <h2>Best Practices</h2>
         <ul>
@@ -42,5 +56,47 @@
         </ul>
     </div>
 </div>
+    </div>
+</main>
+
 {% endmacro %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
