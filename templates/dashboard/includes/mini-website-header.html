@@ -1,7 +1,11 @@
+
+<!-- ARTICLE: Header Element Demo -->
 <header>
     <h1>FrontEnd Insights</h1>
     <h2>Resource for modern Front-End web development</h2>
 </header>
+
+<!-- ARTICLE: Nav Element Demo -->
 {% if detail[0] == '<nav>' %}
     <nav class="demo-nav">
         <a class="demo-nav-link demo-active">Home</a>
@@ -11,27 +15,34 @@
     </nav>
 {% endif %}
 <main>
+    <!-- ARTICLE: Main Element Demo -->
     {% if detail[0] == '<main>' %}
     <h1>Welcome to Our Website</h1>
     <p>Here is the main content of the page...</p>
+
+    <!-- ARTICLE: ARTICLE Element Demo -->
     {% elif detail[0] == '<article>' %}
         <article>
-            <h2>Understanding Semantic HTML</h2>
+            <h2>Semantic HTML</h2>
             <p>Semantic HTML elements clearly describe their meaning...</p>
         </article>
         <article>
-            <h2>The Importance of Accessibility</h2>
+            <h2>Accessibility</h2>
             <p>Making your website accessible to all users is crucial...</p>
         </article>
+        
+    <!-- ARTICLE: SECTION Element Demo -->
     {% elif detail[0] == '<section>' %}
         <section>
             <h2>Features of Our Product</h2>
             <p>Our product offers a range of features...</p>
         </section>
         <section>
-            <h2>Benefits of Using Our Product</h2>
+            <h2>Why Use Our Product</h2>
             <p>Using our product can help you achieve your goals more efficiently...</p>
         </section>
+
+    <!-- ARTICLE: ASIDE Element Demo -->
     {% elif detail[0] == '<aside>' %}
         <aside>
             <h2>Related Links</h2>
@@ -41,15 +52,26 @@
                 <li><a href="#">Link 3</a></li>
             </ul>
         </aside>
+
+    <!-- ARTICLE: FIGURE Element Demo -->
     {% elif detail[0] == '<h2>figure</h2><h2>figcaption</h2>' %}
         <figure>
             <img src="https://picsum.photos/200" alt="Description of image">
             <figcaption>Caption for the image</figcaption>
         </figure>
+
+    <!-- ARTICLE: DETAILS Element Demo -->
+    {% elif detail[0] == '<h2>details</h2><h2>summary</h2>' %}
+        <details>
+            <summary>More Information</summary>
+            <p>Here is some additional information that can be revealed by clicking the summary.</p>
+        </details>
     {% else %}
     <p>Website content goes here...</p>
     {% endif %}
 </main>
+
+<!-- ARTICLE: Footer Element Demo -->
 {% if detail[0] == '<footer>' %}
     <footer>
         <p>Copyright © 2025 FrontEnd Insights. All rights reserved.</p>

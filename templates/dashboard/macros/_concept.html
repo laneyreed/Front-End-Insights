@@ -1,12 +1,12 @@
 {% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details, best_practices) %}
 <main class="concept-main">
 
-    <div class="concept-heading-container">
+    <div class="main-concept-heading-container">
         <h1>{{ concept_header }}</h1>
     </div>
 
     <!-- SECTION: Introduction -->
-    <section class="concept-intro-container" >
+    <section class="main-concept-intro-container" >
         <h2>{{ concept_intro_h2 }}</h2>
         {% for line in concept_intro_text %}
             <p>{{ line }}</p>
@@ -16,59 +16,60 @@
 
     <div class="concept-content-container">
         {% for detail in concept_details %}
-         <!-- ARTICLE: Element Demo -->
-         <article id="{{ detail[0] }}-element">
-            <header class="concept-header">
-                <div class="concept-header-grid">
-                <div class="tag">
-                    <!------------ TAG ------------>
-                    {% if '<h2>' in detail[0] %}
-                    <div class="tag-intro-group">
-                            {{ detail[0]|safe }}
-                    </div>
-                    {% else %}
-                      
-                            <h2 class="tag-h2">{{ detail[0] }}</h2>
-                        
-                    {% endif %}
-
-
-                    
-                        {% if '<p>' in detail[1] %}
-                        <div class="tag-intro-group">{{ detail[1]|safe }}</div>
+            <!-- ARTICLE: Element Demo -->
+            <article id="{{ detail[0] }}-element" class="concept-article">
+                <!-- HEADER -->
+                <header class="concept-header">
+                    <div class="concept-header-grid">
+                    <div class="tag">
+                        <!------------ TAG ------------>
+                        {% if '<h2>' in detail[0] %}
+                        <div class="tag-intro-group">
+                                {{ detail[0]|safe }}
+                        </div>
                         {% else %}
-                            <p class="tag-p">{{ detail[1] }}</p>
+                        
+                                <h2 class="tag-h2">{{ detail[0] }}</h2>
+                            
                         {% endif %}
+
+
+                        
+                            {% if '<p>' in detail[1] %}
+                            <div class="tag-intro-group">{{ detail[1]|safe }}</div>
+                            {% else %}
+                                <p class="tag-p">{{ detail[1] }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </header>
+                <div class="concept-article-example">
+                    <!-- HTML CODE EXAMPLE -->
+                    <div class="html-code-container">
+                        <div class="html-code-header">
+                                Example
+                        </div>
+                        <div class="html-code-box readonly">
+                            {% include 'dashboard/html/example-code.html' %}
+                        </div>
+                    </div>
+                    <!-- MINI WEBSITE DEMO -->
+                    <div class="mini-website">
+                            {% include 'dashboard/includes/mini-website-header.html' %}
                     </div>
                 </div>
-            </header>
-
-                <div class="html-code-container">
-                    <div class="html-code-header">
-                        Example
-                    </div>
-                    <div class="html-code-box readonly">
-                        {% include 'dashboard/html/example-code.html' %}
-                    </div>
-                </div>
-                <div class="mini-website">
-                        {% include 'dashboard/includes/mini-website-header.html' %}
-
-
-                </div>
-
-         </article>
-            {% endfor %}
-            <div class="best-practices">
-    <div>
-        <h2>Best Practices</h2>
-        <ul>
-            {% for practice in best_practices %}
-            <li>{{ practice }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+            </article>
+        {% endfor %}
+        <div class="best-practices">
+            <div>
+                <h2>Best Practices</h2>
+                <ul>
+                    {% for practice in best_practices %}
+                    <li>{{ practice }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
 </main>
 

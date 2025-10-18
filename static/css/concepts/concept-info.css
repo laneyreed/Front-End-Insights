@@ -1,5 +1,18 @@
+/* Content body container */
+.concept-content-container {
+  background: white;
 
-/* INFO HAS Four SECTIONS:*/
+}
+
+.concept-article{
+    background: white;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 10px;
+  border-left: 4px solid #28A745;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+/* Each Article has four sections:*/
 
 
 /* INTRO: html tag intro */
@@ -108,6 +121,25 @@
 
 /* CODE EXAMPLE */
     /* uses html-code-box.css */
+
+@media (min-width: 1150px) {
+  .concept-article-example{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .html-code-container {
+    width: 50%;
+  }
+
+  .mini-website{
+    width: 40%;
+    margin: 1.5rem 0;
+  }
+
+}
+
 
 /* VISUAL EXAMPLE */
     /* uses miniwebsite.css */
