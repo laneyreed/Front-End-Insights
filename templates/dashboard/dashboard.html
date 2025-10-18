@@ -14,33 +14,9 @@
         <!-- HTML Content Area -->
         {% if request.args.get('concept') == 'Semantic Elements' %}
             {% include 'dashboard/html/semantic-elements.html' %}
-        {% elif lang|lower() == 'html' %}
-            {% include 'dashboard/html/html-home.html' %}
+        {% else %}
+            {% include 'dashboard/lang_home.html' %}
         {% endif %}
-
-
-
-        <!-- CSS Content Area -->
-        {% if lang|lower() == 'css' %}
-            {% include 'dashboard/css/css-home.html' %}
-        {% endif %}
-
-
-        <!-- JavaScript Content Area -->
-        {% if lang|lower() == 'javascript' %}
-            {% include 'dashboard/javascript/javascript-home.html' %}
-        {% endif %}
-
-
-        <!-- Python Content Area -->
-        {% if lang|lower() == 'python' %}
-            {% include 'dashboard/python/python-home.html' %}
-        {% endif %}
-
-
-
-
-
 
     </div>
 {% endblock main %}

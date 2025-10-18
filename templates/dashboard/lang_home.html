@@ -1,0 +1,99 @@
+{% from "./dashboard/macros/_lang-home.html" import render_lang_home %}
+<!-- Dasnboard Main Content Home -->
+ <!-- render_lang_home(lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts) -->
+
+
+
+<!-- HTMLMain Content Home -->
+{% if lang == "HTML" %}
+        {{ render_lang_home(
+    lang,
+    "Welcome to the HTML Insights! Here you can learn more about the complex topics in HTML.",
+    [
+        "If you are not familiar with HTML basics, we recommend starting with HTML Tutorial at ",
+        "If you have a good grasp of the basics, this is your hub for more advanced HTML skills and knowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of HTML.",
+    ],
+    "https://www.w3schools.com/html",
+    "Advanced HTML",
+    [
+        ["Semantic HTML", "Master the art of semantic HTML and create web pages that are not only visually appealing but also meaningful, accessible, and search engine optimized. Advanced HTML goes beyond basic tags to explore the rich semantic elements that give structure and meaning to your content, improving both user experience and technical performance."],
+        ["Complex Forms", "Dive deep into the world of complex forms and learn how to create dynamic, user-friendly forms that enhance user experience. This section covers advanced form elements, validation techniques, and best practices for building forms that are both functional and accessible."],
+        ["Tables and Lists", "Explore the intricacies of creating and managing tables and lists in HTML. This section covers advanced techniques for structuring data, including responsive tables, accessible lists, and best practices for presenting information clearly and effectively."],
+        ["Media & Graphics", "Delve into the world of media and graphics in HTML. This section covers advanced techniques for embedding and manipulating images, videos, and other media types, ensuring a rich and engaging user experience."],
+        ["Accessibility", "Learn how to create HTML content that is accessible to all users, including those with disabilities. This section covers best practices for using semantic HTML, ARIA roles, and other techniques to ensure your web pages are usable by everyone."],
+        ["Best Practices", "Discover the best practices for writing clean, maintainable HTML code. This section covers coding standards, naming conventions, and other tips to help you create high-quality HTML documents."]
+    ]
+    ) }}
+
+<!-- CSS Main Content Home -->
+{% elif lang == "CSS" %}
+       {{ render_lang_home(
+    lang,
+    "Welcome to the CSS Insights! Here you can learn more about the complex topics in CSS.",
+    [
+        "If you are not familiar with CSS basics, we recommend starting with CSS Tutorial at", 
+        "If you have a good grasp of the basics, this is your hub for more CSS skills and knowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of CSS.",
+        "Advanced CSS encompasses sophisticated layout systems, animation techniques, responsive design patterns, and architectural methodologies that power modern web applications and complex user interfaces."
+    ],
+    "https://www.w3schools.com/css",
+    "Advanced CSS",
+    [
+        ["Flexbox & Grid", "Master the art of layout with Flexbox and Grid, two powerful CSS layout systems that enable you to create responsive and complex web designs with ease. This section covers advanced techniques for using Flexbox and Grid together, including nested layouts, alignment, and spacing."],
+        ["Animations", "Explore the world of CSS animations and learn how to create engaging, interactive experiences for your users. This section covers keyframe animations, transitions, and best practices for animating elements in a way that enhances usability and aesthetics."],
+        ["Responsive Design", "Master the art of responsive design by understanding how to create fluid layouts that adapt to different screen sizes and orientations. This section covers media queries, flexible grids, and responsive typography to ensure your designs look great on any device."],
+        ["CSS Variables", "Discover the power of CSS variables (custom properties) and how they can simplify your stylesheets and enhance maintainability. This section covers variable declaration, scope, and practical use cases for leveraging CSS variables in your designs."],
+        ["Advanced Selectors", "Take your CSS skills to the next level by mastering advanced selectors that enable you to target elements with precision. This section covers pseudo-classes, pseudo-elements, attribute selectors, and combinators to help you write more efficient and maintainable styles."],
+        ["Performance", "Learn how to optimize your CSS for better performance and faster load times. This section covers techniques such as minimizing reflows and repaints, using efficient selectors, and leveraging browser caching."]
+    ] 
+    ) }}
+
+<!-- JavaScript Main Content Home -->
+{% elif lang == "JavaScript" %}
+        {{ render_lang_home(
+    lang,
+    "Welcome to the JavaScript Insights! Here you can learn more about the complex topics in JavaScript.",
+    [
+        "If you are not familiar with JavaScript basics, we recommend starting with JavaScript Tutorial at",
+        "If you have a good grasp of the basics, this is your hub for more JavaScript skills and knowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of JavaScript.",
+        "Advanced JavaScript encompasses sophisticated programming patterns, asynchronous techniques, performance optimization strategies, and architectural methodologies that power modern web applications and complex software systems."
+    ],
+    "https://www.w3schools.com/js",
+    "Advanced JavaScript",
+    [
+        ["ES6+ Features", "Master the art of modern JavaScript with ES6+ features that enhance your coding experience and improve code quality. This section covers let/const, arrow functions, template literals, destructuring, and modules, empowering you to write cleaner, more efficient code."],
+        ["DOM Manipulation", "Dive deep into the world of the Document Object Model (DOM) and learn how to manipulate HTML elements with JavaScript. This section covers selecting elements, modifying content and styles, handling events, and creating dynamic user interfaces."],
+        ["Async Programming", "Master the art of asynchronous programming in JavaScript and learn how to work with promises, async/await, and callbacks. This section covers best practices for handling asynchronous operations, error handling, and avoiding common pitfalls."],
+        ["Error Handling", "Learn how to effectively handle errors in your JavaScript applications. This section covers try/catch blocks, custom error classes, and best practices for error logging and monitoring."],
+        ["Module System", "Master the art of modular programming in JavaScript and learn how to create reusable code with modules. This section covers ES6 module syntax, dynamic imports, and best practices for organizing your codebase."],
+        ["Best Practices", "Learn how to write clean, maintainable code in JavaScript. This section covers coding conventions, code organization, and best practices for writing efficient and effective JavaScript code."]
+    ]   
+    ) }}
+
+<!-- Python Main Content Home -->
+{% elif lang == "Python" %}
+        {{ render_lang_home(
+    lang,
+    "Welcome to Python Insights! Here you can learn more about the complex topics in Python.",
+    [
+        "If you are not familiar with Python basics, we recommend starting with 'Python for Beginners' at ",
+        "If you have a good grasp of the basics, this is your hub for frontend development with Python skills andknowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of Python for frontend development.",
+        "Python frontend development can be achieved through various frameworks and libraries that enable the creation of dynamic user interfaces and interactive web applications."
+    ],
+    "https://www.python.org/about/gettingstarted/.",
+    "Python Frontend Development",
+    [
+        ["Templating Engines", "Explore how templating engines like Jinja2 and Django Templates allow you to generate dynamic HTML content using Python. Learn how to create reusable templates, manage template inheritance, and integrate data into your frontend views seamlessly."],
+        ["Data Processing for Frontend", "Learn how to use Python for processing and manipulating data before sending it to the frontend. This includes data cleaning, transformation, and formatting to ensure that the data is ready for display in web applications."],
+        ["File Handling & Media", "Discover how to manage file uploads, downloads, and media handling in web applications using Python. This section covers best practices for handling user-generated content, storing files securely, and serving media efficiently."],
+        ["Frontend Asset Management", "Understand how to manage frontend assets such as CSS, JavaScript, and images in Python-based web frameworks. Learn about tools and techniques for optimizing asset delivery, including bundling, minification, and caching strategies."],
+        ["PyScript", "Dive into PyScript, a framework that allows you to run Python code directly in the browser. Learn how to create interactive web applications using Python for frontend logic, enabling a new way of building web interfaces."],
+        ["Python-based UI Frameworks", "Explore popular Python-based UI frameworks such as Flask, Django, and Streamlit. Learn how these frameworks enable you to build interactive and dynamic web applications with Python, leveraging its power for frontend development."]
+    ]
+    ) }}
+{% else %}
+    <p>Select a programming language to view insights.</p>
+{% endif %}
