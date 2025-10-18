@@ -41,6 +41,11 @@
                 <li><a href="#">Link 3</a></li>
             </ul>
         </aside>
+    {% elif detail[0] == '<h2>figure</h2><h2>figcaption</h2>' %}
+        <figure>
+            <img src="https://picsum.photos/200" alt="Description of image">
+            <figcaption>Caption for the image</figcaption>
+        </figure>
     {% else %}
     <p>Website content goes here...</p>
     {% endif %}

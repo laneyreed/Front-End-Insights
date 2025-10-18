@@ -22,7 +22,7 @@
                 <div class="concept-header-grid">
                 <div class="tag">
                     <!------------ TAG ------------>
-                    {% if 'figure' in detail[0] %}
+                    {% if '<h2>' in detail[0] %}
                     <div class="tag-intro-group">
                             {{ detail[0]|safe }}
                     </div>
@@ -34,7 +34,7 @@
 
 
                     
-                        {% if 'figure' in detail[1] %}
+                        {% if '<p>' in detail[1] %}
                         <div class="tag-intro-group">{{ detail[1]|safe }}</div>
                         {% else %}
                             <p class="tag-p">{{ detail[1] }}</p>
