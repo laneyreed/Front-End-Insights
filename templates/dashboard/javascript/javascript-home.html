@@ -1,85 +1,23 @@
+{% from "./dashboard/macros/_lang-home.html" import render_lang_home %}
 <!-- Main Content Home -->
-<main class="main-content">
-    <div class="content-header">
-        <h1 id="page-title">{{ lang }}</h1>
-    </div>
-
-    <div class="content-body" id="content-body">
-        <!-- Dynamic content will be inserted here -->
-         <div class="intro">
-            <h3>Welcome to the {{ lang }} Insights! Here you can learn more about the complex topics in {{ lang }}.</h3>
-            <p>If you are not familiar with {{ lang }} basics, we recommend starting with {{ resources[0] }} at <a class="resource-link" href="{{ resources[1] }}" target="_blank">{{ resources[1] }}</a>.</p>
-            <p>If you have a good grasp of the basics, this is your hub for more {{ lang }} skills and knowledge.</p>
-            <p>Use this guide to explore advanced topics and deepen your understanding of {{ lang }}.</p>
-            <p>Advanced JavaScript encompasses sophisticated programming patterns, asynchronous techniques, performance optimization strategies, and architectural methodologies that power modern web applications and complex software systems.</p>
-        </div>
-
-        <div class="concept-intro">
-            <h3>Advanced {{ lang }}</h3>
-            
-
-            <div class="concept-grid">
-                <!-------------------- ES6+Features ------------------------------>
-                <div class="concept-description">
-                        <h4>ES6+ Features</h4>
-                        <p>
-                            Master the art of modern JavaScript with ES6+ features that enhance your coding experience and improve code quality. 
-                            This section covers let/const, arrow functions, template literals, destructuring, and modules, empowering you to write cleaner, more efficient code.
-                        </p>
-                        <p>
-                            
-                        </p>
-                </div>
-
-                    <!-------------------- DOM Manipulation ------------------------------>
-                <div class="concept-description">
-                        <h4>DOM Manipulation</h4>
-                        <p>
-                            Dive deep into the world of the Document Object Model (DOM) and learn how to manipulate HTML elements with JavaScript. 
-                            This section covers selecting elements, modifying content and styles, handling events, and creating dynamic user interfaces.
-                        </p>
-                </div>
-            </div>
-
-            <div class="concept-grid">
-                    <!-------------------- Async Programming ------------------------------>
-                    <div class="concept-description">
-                        <h4>Async Programming</h4>
-                        <p>
-                            Master the art of asynchronous programming in JavaScript and learn how to work with promises, async/await, and callbacks. 
-                            This section covers best practices for handling asynchronous operations, error handling, and avoiding common pitfalls.
-                        </p>
-                    </div>
-                    
-
-                    <!-------------------- Error Handling ------------------------------>
-                    <div class="concept-description">
-                        <h4>Error Handling</h4>
-                        <p>
-                            Learn how to effectively handle errors in your JavaScript applications. This section covers try/catch blocks, custom error classes, and best practices for error logging and monitoring.
-                        </p>
-                    </div>
-            </div>
-
-            <div class="concept-grid">
-                    <!-------------------- Module System ------------------------------>
-                    <div class="concept-description">
-                        <h4>Module System</h4>
-                        <p>
-                            Master the art of modular programming in JavaScript and learn how to create reusable code with modules. 
-                            This section covers ES6 module syntax, dynamic imports, and best practices for organizing your codebase.
-                        </p>
-                    </div>
-                    
-
-                    <!-------------------- Best Practices ------------------------------>
-                    <div class="concept-description">
-                        <h4>Best Practices</h4>
-                        <p>
-                            Learn how to write clean, maintainable code in JavaScript. This section covers coding conventions, code organization, and best practices for writing efficient and effective JavaScript code.
-                        </p>
-                    </div>
-            </div>
-        </div>
-    </div>
-</main>
+ <!-- lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts -->
+    {{ render_lang_home(
+    lang,
+    "Welcome to the JavaScript Insights! Here you can learn more about the complex topics in JavaScript.",
+    [
+        "If you are not familiar with JavaScript basics, we recommend starting with JavaScript Tutorial at",
+        "If you have a good grasp of the basics, this is your hub for more JavaScript skills and knowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of JavaScript.",
+        "Advanced JavaScript encompasses sophisticated programming patterns, asynchronous techniques, performance optimization strategies, and architectural methodologies that power modern web applications and complex software systems."
+    ],
+    "https://www.w3schools.com/js",
+    "Advanced JavaScript",
+    [
+        ["ES6+ Features", "Master the art of modern JavaScript with ES6+ features that enhance your coding experience and improve code quality. This section covers let/const, arrow functions, template literals, destructuring, and modules, empowering you to write cleaner, more efficient code."],
+        ["DOM Manipulation", "Dive deep into the world of the Document Object Model (DOM) and learn how to manipulate HTML elements with JavaScript. This section covers selecting elements, modifying content and styles, handling events, and creating dynamic user interfaces."],
+        ["Async Programming", "Master the art of asynchronous programming in JavaScript and learn how to work with promises, async/await, and callbacks. This section covers best practices for handling asynchronous operations, error handling, and avoiding common pitfalls."],
+        ["Error Handling", "Learn how to effectively handle errors in your JavaScript applications. This section covers try/catch blocks, custom error classes, and best practices for error logging and monitoring."],
+        ["Module System", "Master the art of modular programming in JavaScript and learn how to create reusable code with modules. This section covers ES6 module syntax, dynamic imports, and best practices for organizing your codebase."],
+        ["Best Practices", "Learn how to write clean, maintainable code in JavaScript. This section covers coding conventions, code organization, and best practices for writing efficient and effective JavaScript code."]
+    ]   
+    ) }}

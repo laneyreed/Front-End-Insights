@@ -1,86 +1,23 @@
+{% from "./dashboard/macros/_lang-home.html" import render_lang_home %}
 <!-- Main Content Home -->
-<main class="main-content">
-    <div class="content-header">
-        <h1 id="page-title">{{ lang }}</h1>
-    </div>
-
-    <div class="content-body" id="content-body">
-        <!-- Dynamic content will be inserted here -->
-         <div class="intro">
-            <h3>Welcome to the {{ lang }} Insights! Here you can learn more about the complex topics in {{ lang }}.</h3>
-            <p>If you are not familiar with {{ lang }} basics, we recommend starting with {{ resources[0] }} at <a class="resource-link" href="{{ resources[1] }}" target="_blank">{{ resources[1] }}</a>.</p>
-            <p>If you have a good grasp of the basics, this is your hub for more {{ lang }} skills and knowledge.</p>
-            <p>Use this guide to explore advanced topics and deepen your understanding of {{ lang }}.</p>
-            <p>Advanced CSS encompasses sophisticated layout systems, animation techniques, responsive design patterns, and architectural methodologies that power modern web applications and complex user interfaces.</p>
-        </div>
-
-        <div class="concept-intro">
-            <h3>Advanced {{ lang }}</h3>
-                <div class="concept-grid">
-                    <!-------------------- Flexbox & Grid ------------------------------>
-                    <div class="concept-description">
-                        <h4>Flexbox & Grid</h4>
-                        <p>
-                            Master the art of layout with Flexbox and Grid, two powerful CSS layout systems that enable you to create responsive and complex web designs with ease. 
-                            This section covers advanced techniques for using Flexbox and Grid together, including nested layouts, alignment, and spacing.
-                        </p>
-                    </div>
-
-                    <!-------------------- Animations ------------------------------>
-                    <div class="concept-description">
-                        <h4>Animations</h4>
-                        <p>
-                            Explore the world of CSS animations and learn how to create engaging, interactive experiences for your users. 
-                            This section covers keyframe animations, transitions, and best practices for animating elements in a way that enhances usability and aesthetics.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="concept-grid">
-                    <!-------------------- Responsive Design ------------------------------>
-                    <div class="concept-description">
-                        <h4>Responsive Design</h4>
-                        <p>
-                            Master the art of responsive design by understanding how to create fluid layouts that adapt to different screen sizes and orientations. 
-                            This section covers media queries, flexible grids, and responsive typography to ensure your designs look great on any device.
-                        </p>
-                    </div>
-
-                    <!-------------------- CSS Variables ------------------------------>
-                    <div class="concept-description">
-                        <h4>CSS Variables</h4>
-                        <p>
-                            Discover the power of CSS variables (custom properties) and how they can simplify your stylesheets and enhance maintainability. 
-                            This section covers variable declaration, scope, and practical use cases for leveraging CSS variables in your designs.
-                        </p>
-                    </div>
-
-
-                </div>
-
-                <div class="concept-grid">
-                    <!-------------------- Advanced Selectors ------------------------------>
-                    <div class="concept-description">
-                        <h4>Advanced Selectors</h4>
-                        <p>
-                            Take your CSS skills to the next level by mastering advanced selectors that enable you to target elements with precision. 
-                            This section covers pseudo-classes, pseudo-elements, attribute selectors, and combinators to help you write more efficient and maintainable styles.
-                        </p>
-                    </div>
-
-                    <!-------------------- Performance ------------------------------>
-                    <div class="concept-description">
-                        <h4>Performance</h4>
-                        <p>
-                            Learn how to optimize your CSS for better performance and faster load times. 
-                            This section covers techniques such as minimizing reflows and repaints, using efficient selectors, and leveraging browser caching.
-                        </p>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</main>
+ <!-- lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts -->
+    {{ render_lang_home(
+    lang,
+    "Welcome to the CSS Insights! Here you can learn more about the complex topics in CSS.",
+    [
+        "If you are not familiar with CSS basics, we recommend starting with CSS Tutorial at", 
+        "If you have a good grasp of the basics, this is your hub for more CSS skills and knowledge.",
+        "Use this guide to explore advanced topics and deepen your understanding of CSS.",
+        "Advanced CSS encompasses sophisticated layout systems, animation techniques, responsive design patterns, and architectural methodologies that power modern web applications and complex user interfaces."
+    ],
+    "https://www.w3schools.com/css",
+    "Advanced CSS",
+    [
+        ["Flexbox & Grid", "Master the art of layout with Flexbox and Grid, two powerful CSS layout systems that enable you to create responsive and complex web designs with ease. This section covers advanced techniques for using Flexbox and Grid together, including nested layouts, alignment, and spacing."],
+        ["Animations", "Explore the world of CSS animations and learn how to create engaging, interactive experiences for your users. This section covers keyframe animations, transitions, and best practices for animating elements in a way that enhances usability and aesthetics."],
+        ["Responsive Design", "Master the art of responsive design by understanding how to create fluid layouts that adapt to different screen sizes and orientations. This section covers media queries, flexible grids, and responsive typography to ensure your designs look great on any device."],
+        ["CSS Variables", "Discover the power of CSS variables (custom properties) and how they can simplify your stylesheets and enhance maintainability. This section covers variable declaration, scope, and practical use cases for leveraging CSS variables in your designs."],
+        ["Advanced Selectors", "Take your CSS skills to the next level by mastering advanced selectors that enable you to target elements with precision. This section covers pseudo-classes, pseudo-elements, attribute selectors, and combinators to help you write more efficient and maintainable styles."],
+        ["Performance", "Learn how to optimize your CSS for better performance and faster load times. This section covers techniques such as minimizing reflows and repaints, using efficient selectors, and leveraging browser caching."]
+    ] 
+    ) }}
