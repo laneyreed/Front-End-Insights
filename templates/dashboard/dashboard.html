@@ -10,9 +10,8 @@
     <div class="dashboard-container">
         {% include 'dashboard/sidebar.html' %}
          
-<!-- Conditional content includes based on request parameters -->
         <!-- HTML Content Area -->
-        {% if request.args.get('concept') == 'Semantic Elements' %}
+        {% if request.args.get('concept') == 'Semantic Elements' %}<!-- Conditional content includes based on request parameters -->
             {% include 'dashboard/html/semantic-elements.html' %}
         {% else %}
             {% include 'dashboard/lang_home.html' %}

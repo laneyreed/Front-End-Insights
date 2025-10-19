@@ -1,3 +1,5 @@
+
+
 {% macro render_lang_home(lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts) %}
 <main class="main-content">
     <div class="content-header">
@@ -18,18 +20,16 @@
             </div>
 
             <div class="concepts-intro">
-            <h3>{{ lang_concepts_intro }}</h3>
-                <div class="concept-grid">
-                    {% for concept in lang_concepts %}
-                    <div class="concept-description">
-                        <h4>{{ concept[0] }}</h4>
-                        <p>{{ concept[1] }}</p>
-                    </div>
-                    {% endfor %}
+                <h3>{{ lang_concepts_intro }}</h3>
+                    <div class="concept-grid">
+                        {% for concept in lang_concepts %}
+                        <div class="concept-description">
+                            <h4>{{ concept[0] }}</h4>
+                            <p>{{ concept[1] }}</p>
+                        </div>
+                        {% endfor %}
                 </div>
-
             </div>
-        
         </div>
 </main>
     {% endmacro %}
