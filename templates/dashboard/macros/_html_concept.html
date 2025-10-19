@@ -1,0 +1,114 @@
+{% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details) %}
+<main class="concept-main">
+
+    <div class="main-concept-heading-container">
+        <h1>{{ concept_header }}</h1>
+    </div>
+
+    <!-- SECTION: Introduction -->
+    <section class="main-concept-intro-container" >
+        <h2>{{ concept_intro_h2 }}</h2>
+        {% for line in concept_intro_text %}
+            <p>{{ line }}</p>
+            <br>
+        {% endfor %}
+    </section>
+
+    <div class="css-concept-content-container">
+        {% for detail in concept_details %}
+            <!-- ARTICLE: Element Demo -->
+            <!-- <article id="{{ detail[0] }}-element" class="concept-article"> -->
+            <section id="" class="concept-section">
+                <!-- HEADER -->
+                        <!-- <div class="tag"> -->
+                <div class="concept-header html-tag-header">
+                    <!------------ TAG ------------>
+                    {% if '<h2>' in detail[0] %}
+                        <div class="tag-intro-group">
+                            {{ detail[0]|safe }}
+                        </div>
+                    {% else %}
+                        <h2 class="tag-h2">{{ detail[0] }}</h2>
+                    {% endif %}
+
+                    {% if '<p>' in detail[1] %}
+                        <div class="tag-intro-group">{{ detail[1]|safe }}</div>
+                        {% else %}
+                            <p class="tag-p">{{ detail[1] }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="concept-content">
+                    <div class="concept-article-example">
+                        <!-- HTML CODE EXAMPLE -->
+                        <div class="html-code-container">
+                            <div class="html-code-header">
+                                    Example
+                            </div>
+                            <div class="html-code-box readonly">
+                                {% include 'dashboard/components/example-code.html' %}
+                            </div>
+                        </div>
+                        <!-- MINI WEBSITE DEMO -->
+                        <div class="mini-website">
+                                {% include 'dashboard/components/mini-website.html' %}
+                        </div>
+                    </div>
+
+                    <div class="more-info best-practices">
+                            <h2>Best Practices</h2>
+                            <ul>
+                                {% for practice in detail[2] %}
+                                <li>{{ practice }}</li>
+                                {% endfor %}
+                            </ul>
+                    </div>
+                </div>
+            </section>
+
+        {% endfor %}
+
+    </div>
+</main>
+
+{% endmacro %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

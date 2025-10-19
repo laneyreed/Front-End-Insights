@@ -7,14 +7,23 @@
 
 /***************************** Concept Styles *****************************/
 /*Concept Info */
-@import url('./concepts/concept-container.css');
-@import url('./concepts/concept-intro.css');
-@import url('./concepts/concept-info.css');
+@import url('./concepts/all-concepts-intro.css');
+
+
+/***************************** HTML Concept Styles *****************************/
+@import url('./concepts/html-concepts/html-concept-info.css');
+@import url('./concepts/html-concepts/html-concept-container.css');
 
 /* Concept Code */
 @import url('./component-styles/html-code-box.css');
 /* Concept Miniwebsite */
 @import url('./component-styles/miniwebsite.css');
+
+
+
+
+/***************************** CSS Concept Styles *****************************/
+@import url('./concepts/css-concepts/css-concept.css');
 
 
 

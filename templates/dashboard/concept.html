@@ -1,0 +1,49 @@
+{% from "dashboard/macros/_html_concept.html" import render_concept %}
+{% from "dashboard/macros/_css_concept.html" import render_css_concept %}
+
+
+{% if request.args.get('concept') == 'Semantic Elements' %}<!-- Conditional content includes based on request parameters -->
+    {{ render_concept(
+        "HTML Semantic Elements",
+        "What are Semantic Elements?",
+        [
+            "Semantic elements clearly describe their meaning in a human and machine-readable way.",
+            "They provide structure and meaning to the content they enclose, improving accessibility and SEO.",
+            "Using semantic elements helps create a well-structured and meaningful HTML document."
+        ],
+        [
+        ['<header>', 'used to represent introductory content or a group of navigational links', ['Use for main page headers', 'Can be used multiple times per page within sections', 'Avoid using for non-introductory content']],
+        ['<nav>', 'defines a set of navigation links', ['Use for primary navigation links', 'Can be used multiple times per page for different navigation sections', 'Avoid using for non-navigation content']],
+        ['<main>', 'specifies the main content of a document', ['Use for the main content unique to the document', 'Should only be used once per page', 'Avoid using for repeated content like headers or footers']],
+        ['<footer>', 'defines a footer for a document or section', ['Use for the footer content of a document', 'Can be used multiple times per page within sections', 'Avoid using for non-footer content']],
+        ['<article>', 'represents a self-contained composition in a document, page, application, or site', ['Use for standalone articles or blog posts', 'Can be used multiple times per page', 'Avoid using for non-article content']],
+        ['<section>', 'defines a section in a document', ['Use for thematic grouping of content', 'Can be used multiple times per page', 'Avoid using for non-section content']],
+        ['<aside>', 'represents a portion of a document whose content is only indirectly related to the document\'s main content', ['Use for sidebars or related links', 'Can be used multiple times per page', 'Avoid using for main content']],
+        ['<h2>figure</h2><h2>figcaption</h2>','<p>represents self-contained content, often with an optional caption</p><p>defines a caption for a figure element</p>', ['Use for images, diagrams, or code snippets with captions', 'Can be used multiple times per page', 'Avoid using for non-figure content']],
+        ['<h2>details</h2><h2>summary</h2>','<p>defines a disclosure widget from which users can obtain additional information or controls</p><p>provides a summary, heading, or legend for the details element</p>', ['Use for collapsible content sections', 'Can be used multiple times per page', 'Avoid using for non-collapsible content']],
+        ['<cite>', 'used to reference a creative work, such as a book, article, or song', ['Use for titles of works', 'Can be used multiple times per page', 'Avoid using for general references']],
+        ['<q>', 'used to indicate a short inline quotation', ['Use for short quotes within a paragraph', 'Can be used multiple times per page', 'Avoid using for long quotes or blockquotes']],
+        ['<blockquote>', 'used to indicate a section that is quoted from another source', ['Use for long quotes or excerpts', 'Can be used multiple times per page', 'Avoid using for short quotes']],
+        ['<time>', 'represents a specific period in time', ['Use for dates and times', 'Can be used multiple times per page', 'Avoid using for non-time related content']],
+        ['<address>', 'provides contact information for the author/owner of a document or article', ['Use for author contact information', 'Can be used multiple times per page', 'Avoid using for non-contact information']],
+        ['<h2>dl</h2><h2>dt</h2><h2>dd</h2><h2>dfn</h2>', '<p>defines a description list</p><p>item to be described</p><p>description of item</p><p>item being defined within a description</p>', ['Use for lists of terms and descriptions', 'Can be used multiple times per page', 'Avoid using for non-description lists']],
+        ['Text-Level Semantic Elements', '<p>Text-level semantic elements are used to define the meaning of inline content within a document.</p><p>These elements help convey the structure and significance of text, making it more accessible and understandable.</p>', ['Use for inline content that has a specific meaning', 'Can be used multiple times per page', 'Avoid using for non-semantic content']]
+        ]
+    ) }}
+{% elif request.args.get('concept') == 'Flexbox & Grid' %}<!-- Conditional content includes based on request parameters -->
+    {{ render_css_concept(
+        "CSS Flexbox",
+        "What is Flexbox?",
+        [
+            "Flexbox is a layout model that allows items within a container to be aligned and distributed space efficiently.",
+            "It provides a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown.",
+            "Flexbox is particularly useful for creating responsive layouts."
+        ],
+        [
+        ['Flexbox Basics', 'Understanding the foundation of CSS Flexbox layout', ['Flex Container: The parent element with display: flex', 'Flex Items: Direct children of the flex container', 'Main Axis: Primary axis along which flex items are laid out', 'Cross Axis: Axis perpendicular to the main axis']],
+        ]
+    ) }}
+
+        {% else %}
+            <h2>No Content</h2>
+{% endif %}

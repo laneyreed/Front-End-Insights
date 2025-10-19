@@ -1,0 +1,96 @@
+/* ==============================================================
+    Main Concept Intro(Semantic Elements, Complex Forms etc...)
+   ============================================================== */
+
+/* ==================
+    WHOLE CONTAINER
+   ================== */
+
+.concept-main {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+/* ====================
+    MAIN CONCEPT TITLE
+   ==================== */
+.main-concept-heading-container {
+  margin-bottom: 1.5rem;
+}
+
+/* ====================
+    MAIN CONCEPT INTRO
+   ==================== */
+
+.main-concept-intro-container {
+  background: white;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 10px;
+  border-left: 4px solid #28A745;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.main-concept-intro-container h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.main-concept-intro-container p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+
+/* =======================================
+    CONCEPT SECTIONS FOR EACH SUB CONCEPT
+   ======================================= */
+.css-concept-content-container{
+
+}
+
+.concept-section{
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.concept-header{
+  background: #45855D;
+  background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.concept-content {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .concept-content {
+    padding: 1rem;
+  }
+}
+
+/* ========================================
+    MORE INFO SECTION FOR EACH SUB CONCEPT
+   ======================================== */
+.more-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff3cd;
+  padding: 3rem;
+  border-radius: 8px;
+  border-left: 4px solid #F3DE2C;
+  margin: 2rem 0;
+}
+

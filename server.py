@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -6,13 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/gap-test")
-def gap_test():
-    return render_template("gap-test.html")
-
-
 @app.route("/dashboard/<language>")
 def language_dashboard(language):
+    print(f"Requested language dashboard: {language}")
+    print(request.args.get('concept'))
     if language == "html":
         language= "HTML"
         resources = ["HTML Tutorial", "https://www.w3schools.com/html"]

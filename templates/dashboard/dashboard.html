@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}FrontEnd Insights: CSS Home{% endblock title %}
+{% block title %}FrontEnd Insights: {{lang}} Home{% endblock title %}
 
 {% block header %}
     {% include 'dashboard/top-nav.html' %}
@@ -9,12 +9,11 @@
 {% block main %}
     <div class="dashboard-container">
         {% include 'dashboard/sidebar.html' %}
-         
-        <!-- HTML Content Area -->
-        {% if request.args.get('concept') == 'Semantic Elements' %}<!-- Conditional content includes based on request parameters -->
-            {% include 'dashboard/html/semantic-elements.html' %}
-        {% else %}
+        {% if request.args.get('concept') != None  %}<!-- Conditional content includes based on request parameters -->
+            {% include 'dashboard/concept.html' %}
+        {% else %}<!-- Conditional content includes based on request parameters -->
             {% include 'dashboard/lang_home.html' %}
+
         {% endif %}
 
     </div>

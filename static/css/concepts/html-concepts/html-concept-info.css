@@ -5,7 +5,7 @@
 }
 
 .concept-article{
-    background: white;
+  background: white;
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border-radius: 10px;
   border-left: 4px solid #28A745;
@@ -16,42 +16,15 @@
 
 
 /* INTRO: html tag intro */
-.tag {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border: 2px solid #F3DE2C;
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
 
-.tag::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: #F3DE2C;
-}
-
-.tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
-  border-color: rgba(69, 133, 93, 0.4);
-}
-
-.tag h2 {
+.html-tag-header h2 {
   color: rgba(69, 133, 93, 1);
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   font-weight: 600;
   margin: 0 0 0.75rem 0;
   padding: 0.5rem 1rem;
-  background: rgba(69, 133, 93, 0.1);
+  background: white;
   border-radius: 8px;
   border: 1px solid rgba(69, 133, 93, 0.2);
   display: inline-block;
@@ -59,7 +32,7 @@
 
 }
 
-.tag h2::after {
+.html-tag-header h2::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -67,7 +40,7 @@
   transform: translateX(-50%);
   width: 30px;
   height: 2px;
-  background: rgba(69, 133, 93, 1);
+  background: red;
   border-radius: 1px;
 }
 
@@ -79,15 +52,12 @@
 
 .tag-intro-group p {
   width: 40%;
-  color: #34495e;
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   line-height: 1;
-  margin: 0;
-  font-weight: 400;
 }
 
-.tag .tag-p {
-  color: #34495e;
+.html-tag-header .tag-p {
+  color: white;
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   margin: 0;
@@ -96,22 +66,14 @@
 
 /* Responsive adjustments for tag */
 @media (max-width: 768px) {
-  .tag {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .tag h2 {
+  .html-tag-header h2 {
     padding: 0.4rem 0.8rem;
     margin-bottom: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .tag {
-    padding: 1rem;
-  }
-
-  .tag h2 {
+  .html-tag-header h2 {
     padding: 0.3rem 0.6rem;
   }
 }
@@ -146,12 +108,4 @@
 
 
 /* BEST PRACTICES */
-/* Best Practices Section */
-.best-practices {
-  display: flex;
-  background-color: #fff3cd;
-  padding: 3rem;
-  border-radius: 8px;
-  border-left: 4px solid #F3DE2C;
-  margin: 2rem 0;
-}
+/* styled in all-concepts-intro.css */
