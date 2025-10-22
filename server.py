@@ -8,7 +8,7 @@ def home():
 
 @app.route("/dashboard/<language>")
 def language_dashboard(language):
-    print(f"Requested language dashboard: {language}")
+    # print(f"Requested language dashboard: {language}")
     print(request.args.get('concept'))
     if language == "html":
         language= "HTML"
