@@ -21,22 +21,14 @@ def language_dashboard(language):
             "Accessibility",
             "Best Practices"
         ]
-        # # Convert the display format (with spaces/symbols) to concept URL parameter (with hyphens)
-        # concepts_url_format ={
-        #     "Semantic Elements": "semantic-elements",
-        #     "Complex Forms": "complex-forms",
-        #     "Tables & Lists": "tables-lists",
-        #     "Media & Graphics": "media-graphics",
-        #     "Accessibility": "accessibility",
-        #     "Best Practices": "best-practices"
-        # }
-        #return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, concepts_url_format=concepts_url_format, resources=resources)
         return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
+    
     elif language == "css":
         language= "CSS"
         resources = ["CSS Tutorial", "https://www.w3schools.com/css"]
         concepts = [
-            "Flexbox & Grid",
+            "Grid Layout",
+            "Flexbox",
             "Animations", 
             "Responsive Design",
             "CSS Variables",
@@ -60,6 +52,7 @@ def language_dashboard(language):
         
     elif language == "python":
         language= "Python"
+        resources = ["Python For Beginners", "https://www.python.org/about/gettingstarted"]
         concepts = [
             "Templating Engines",
             "Data Processing for Frontend", 
@@ -68,14 +61,6 @@ def language_dashboard(language):
             "PyScript",
             "Python-based UI Frameworks"
         ]
-        resources = ["Python For Beginners", "https://www.python.org/about/gettingstarted"]
-        # resources = [
-        #     {"beginner": "https://www.learnpython.org/"},
-            # {"intermediate": "https://realpython.com/"},
-            # {"name": "Official Python Documentation", "url": "https://docs.python.org/3/"},
-            # {"name": "Real Python Tutorials", "url": "https://realpython.com/"},
-            # {"name": "Automate the Boring Stuff with Python", "url": "https://automatetheboringstuff.com/"}
-        #]
         return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
         
     else:

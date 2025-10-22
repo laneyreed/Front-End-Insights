@@ -1,79 +1,8 @@
-{% from "dashboard/macros/_html_concept.html.jinja2" import render_concept %}
-{% from "dashboard/macros/_css_concept.html.jinja2" import render_css_concept %}
-
 
 {% if request.args.get('concept') == 'Semantic Elements' %}<!-- Conditional content includes based on request parameters -->
     {% include "dashboard/langconcepts/htmlconcepts/sematic.html.jinja2" %}
-{% elif request.args.get('concept') == 'Flexbox & Grid' %}<!-- Conditional content includes based on request parameters -->
-    {{ render_css_concept(
-        "CSS Flexbox",
-        "What is Flexbox?",
-        [
-            "Flexbox is a layout model that allows items within a container to be aligned and distributed space efficiently.",
-            "It provides a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown.",
-            "Flexbox is particularly useful for creating responsive layouts."
-        ],
-        [
-        
-        [
-            'Flexbox Basics', 
-            'Understanding the foundation of CSS Flexbox layout', 
-            'Flexbox (Flexible Box Layout) is a CSS layout method that provides an efficient way to arrange, distribute, and align items in a container, even when their size is unknown or dynamic.', 
-            [['Basic Flex Container'], ['Item 1', 'Item 2', 'Item 3']], 
-            [['Flex Container:', 'The parent element with display: flex'], ['Flex Items:', 'Direct children of the flex container'], ['Main Axis:', 'Primary axis along which flex items are laid out'], ['Cross Axis:', 'Axis perpendicular to the main axis']]
-        ],
-
-        [
-            'Flex Direction', 
-            'Control the direction of flex items', 
-            'The <code>flex-direction</code> property defines the main axis and the direction flex items are placed in the container.', 
-            [['Flex Direction Demo'], ['First', 'Second', 'Third', 'Fourth']], 
-            [['<code>row</code> :', 'The default value. Items are arranged horizontally, left to right. '], ['<code>row-reverse</code> :', 'Items are arranged horizontally, but from right to left. '], ['<code>column</code> :', 'Items are arranged vertically, from top to bottom.'], ['<code>column-reverse</code> :', 'Items are arranged vertically, but from bottom to top']]
-        ],
-
-        [
-            'Justify Content', 
-            'Align flex items along the main axis', 
-            'The <code>justify-content</code> property defines how flex items are aligned along the main axis of the flex container.', 
-            [['Justify Content Demo'], ['A', 'B', 'C']], 
-            [['<code>flex-start</code> :', 'Items are packed toward the start of the flex container. '], ['<code>flex-end</code> :', 'Items are packed toward the end of the flex container. '], ['<code>center</code> :', 'Items are centered along the line.'], ['<code>space-between</code> :', 'Items are evenly distributed; first item is on the start line, last item on the end line.'], ['<code>space-around</code> :', 'Items are evenly distributed with equal space around them.']]
-        ],
-
-        [
-            'Align Items', 
-            'Align flex items along the cross axis', 
-            'The <code>align-items</code> property defines how flex items are aligned along the cross axis of the flex container.', 
-            [['Align Items Demo'], ['Small', 'Large', 'Medium']],
-            [['<code>stretch</code> :', 'Items stretch to fill the container (default). '], ['<code>flex-start</code> :', 'Items are aligned to the start of the cross axis. '], ['<code>flex-end</code> :', 'Items are aligned to the end of the cross axis.'], ['<code>center</code> :', 'Items are centered along the cross axis.'], ['<code>baseline</code> :', 'Items are aligned such that their baselines align.']]
-        ],
-        
-        [
-            'Flex Wrap', 
-            'Control whether flex items are forced onto one line or can wrap onto multiple lines', 
-            'The <code>flex-wrap</code> property defines whether flex items should wrap onto multiple lines or stay on a single line.', 
-            [['Flex Wrap Demo'], ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6']], 
-            [['<code>nowrap</code> :', 'Items are forced onto a single line. '], ['<code>wrap</code> :', 'Items can wrap onto multiple lines. '], ['<code>wrap-reverse</code> :', 'Items can wrap onto multiple lines, but in reverse order.']]
-        ],
-
-        [
-            'Flex Item Properties', 
-            'Control individual flex item behavior', 
-            'Flex item properties allow you to control the size and growth of individual flex items within a flex container.', 
-            [['flex-grow demo', 'flex-basis demo'], [['Normal', 'flex-grow: 1', 'flex-grow: 2', 'Normal'], ['Auto', 'flex-basis: 200px', 'Auto']]], 
-            [['<code>flex-grow</code> :', 'Defines the ability for a flex item to grow if necessary. '], ['<code>flex-shrink</code> :', 'Defines the ability for a flex item to shrink if necessary. '], ['<code>flex-basis</code> :', 'Defines the default size of an element before the remaining space is distributed.']]
-        ],
-
-        [
-            'Flex Basis', 
-            'Control the initial size of flex items', 
-            'The <code>flex-basis</code> property defines the default size of an element before the remaining space is distributed.', 
-            [['Flex Basis Demo'], ['Item A', 'Item B', 'Item C']], 
-            [['<code>auto</code> :', 'The default size is based on the content size. '], ['<code>50%</code> :', 'The item takes up 50% of the container width. '], ['<code>100px</code> :', 'The item has a fixed size of 100 pixels.']]
-        ],
-
-        ]
-    ) }}
-
-        {% else %}
-            <h2>No Content</h2>
+{% elif request.args.get('concept') == 'Flexbox' %}<!-- Conditional content includes based on request parameters -->
+    {% include "dashboard/langconcepts/cssconcepts/flexbox.html.jinja2" %}
+{% else %}
+    <h2>No Content</h2>
 {% endif %}
