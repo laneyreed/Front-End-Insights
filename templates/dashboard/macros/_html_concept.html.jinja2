@@ -23,12 +23,18 @@
                         <!-- <div class="tag"> -->
                 <div class="concept-header html-tag-header">
                     <!------------ TAG ------------>
-                    {% if '<h2>' in detail[0] %}
-                        <div class="tag-intro-group">
-                            {{ detail[0]|safe }}
-                        </div>
-                    {% else %}
+                    {# Detect if items are nested or flat #}
+                    {% if detail[0] is iterable and detail[0] is not string %}
+                        {# Nested - create headers for each tag #}
+                        {% for tag in detail[0] %}
+                            <h2 class="tag-h2">&lt;{{ tag }}&gt;</h2>
+                        {% endfor %}
+                        {# Detect if items should be treated as a tag #}
+                    {% elif detail[0] == 'Text-Level Semantic Elements' %}
                         <h2 class="tag-h2">{{ detail[0] }}</h2>
+                    {% else %}
+                    {# Single - create tag #}
+                        <h2 class="tag-h2">&lt;{{ detail[0] }}&gt;</h2>
                     {% endif %}
 
                     {% if '<p>' in detail[1] %}
@@ -46,12 +52,12 @@
                                     Example
                             </div>
                             <div class="html-code-box readonly">
-                                {% include 'dashboard/components/example-code.html' %}
+                                {% include 'dashboard/components/example-code.html.jinja2' %}
                             </div>
                         </div>
                         <!-- MINI WEBSITE DEMO -->
                         <div class="mini-website">
-                                {% include 'dashboard/components/mini-website.html' %}
+                                {% include 'dashboard/components/mini-website.html.jinja2' %}
                         </div>
                     </div>
 

@@ -1,18 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'base.html.jinja2' %}
 
 {% block title %}FrontEnd Insights: {{lang}} Home{% endblock title %}
 
 {% block header %}
-    {% include 'dashboard/top-nav.html' %}
+    {% include 'dashboard/top-nav.html.jinja2' %}
 {% endblock header %}
 
 {% block main %}
     <div class="dashboard-container">
-        {% include 'dashboard/sidebar.html' %}
+        {% include 'dashboard/sidebar.html.jinja2' %}
         {% if request.args.get('concept') != None  %}<!-- Conditional content includes based on request parameters -->
-            {% include 'dashboard/concept.html' %}
+            {% include 'dashboard/concept.html.jinja2' %}
         {% else %}<!-- Conditional content includes based on request parameters -->
-            {% include 'dashboard/lang_home.html' %}
+            {% include 'dashboard/lang_home.html.jinja2' %}
 
         {% endif %}
 

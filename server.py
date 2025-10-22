@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html.jinja2")
 
 @app.route("/dashboard/<language>")
 def language_dashboard(language):
@@ -21,17 +21,17 @@ def language_dashboard(language):
             "Accessibility",
             "Best Practices"
         ]
-        # Convert the display format (with spaces/symbols) to concept URL parameter (with hyphens)
-        concepts_url_format ={
-            "Semantic Elements": "semantic-elements",
-            "Complex Forms": "complex-forms",
-            "Tables & Lists": "tables-lists",
-            "Media & Graphics": "media-graphics",
-            "Accessibility": "accessibility",
-            "Best Practices": "best-practices"
-        }
+        # # Convert the display format (with spaces/symbols) to concept URL parameter (with hyphens)
+        # concepts_url_format ={
+        #     "Semantic Elements": "semantic-elements",
+        #     "Complex Forms": "complex-forms",
+        #     "Tables & Lists": "tables-lists",
+        #     "Media & Graphics": "media-graphics",
+        #     "Accessibility": "accessibility",
+        #     "Best Practices": "best-practices"
+        # }
         #return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, concepts_url_format=concepts_url_format, resources=resources)
-        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
+        return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
     elif language == "css":
         language= "CSS"
         resources = ["CSS Tutorial", "https://www.w3schools.com/css"]
@@ -43,7 +43,7 @@ def language_dashboard(language):
             "Advanced Selectors",
             "Performance"
         ]
-        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
+        return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
         
     elif language == "javascript":
         language= "JavaScript"
@@ -56,7 +56,7 @@ def language_dashboard(language):
             "Modules",
             "Best Practices"
         ]
-        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
+        return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
         
     elif language == "python":
         language= "Python"
@@ -76,7 +76,7 @@ def language_dashboard(language):
             # {"name": "Real Python Tutorials", "url": "https://realpython.com/"},
             # {"name": "Automate the Boring Stuff with Python", "url": "https://automatetheboringstuff.com/"}
         #]
-        return render_template("dashboard/dashboard.html", lang=language, concepts=concepts, resources=resources)
+        return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
         
     else:
         return "Language not found", 404

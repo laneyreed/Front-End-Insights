@@ -1,0 +1,122 @@
+{% macro render_css_concept(css_concept_header, css_concept_intro_h2, css_concept_intro_text, css_concept_details) %}
+<main class="concept-main">
+
+    <div class="main-concept-heading-container">
+        <h1>{{ css_concept_header }}</h1>
+    </div>
+
+    <!-- SECTION: Introduction -->
+    <section class="main-concept-intro-container" >
+        <h2>{{ css_concept_intro_h2 }}</h2>
+        {% for line in css_concept_intro_text %}
+            <p>{{ line }}</p>
+            <br>
+        {% endfor %}
+    </section>
+    <div class="css-concept-content-container">
+             {% for detail in css_concept_details %}
+        <section id="flex-basics" class="concept-section">
+            <div class="concept-header">
+                <h2 class="css-concept-title">{{ detail[0] }}</h2>
+                <p class="css-concept-description">{{ detail[1] }}</p>
+            </div>
+            <div class="concept-content">
+                <p>{{ detail[2] | safe }}</p>
+                
+
+                
+                <div class="code-block">
+                    {% if detail[0] == 'Flexbox Basics' %}
+                        <span class="code-property">.container</span> {
+                        <span class="code-property">display</span>: <span class="code-value">flex</span>;}
+                    {% elif detail[0] == 'Flex Direction' %}
+                        <span class="code-property">flex-direction</span>: <span class="code-value">row</span>; /* default */
+                        <span class="code-property">flex-direction</span>: <span class="code-value">column</span>;
+                        <span class="code-property">flex-direction</span>: <span class="code-value">row-reverse</span>;
+                        <span class="code-property">flex-direction</span>: <span class="code-value">column-reverse</span>;
+                    {% elif detail[0] == 'Justify Content' %}
+                        <span class="code-property">justify-content</span>: <span class="code-value">flex-start</span>; /* default */
+                        <span class="code-property">justify-content</span>: <span class="code-value">center</span>;
+                        <span class="code-property">justify-content</span>: <span class="code-value">space-between</span>;
+                    {% elif detail[0] == 'Align Items' %}
+                        <span class="code-property">align-items</span>: <span class="code-value">stretch</span>; /* default */
+                        <span class="code-property">align-items</span>: <span class="code-value">center</span>;
+                        <span class="code-property">align-items</span>: <span class="code-value">flex-end</span>;
+                    {% elif detail[0] == 'Flex Wrap' %}
+                        <span class="code-property">flex-wrap</span>: <span class="code-value">nowrap</span>; /* default */
+                        <span class="code-property">flex-wrap</span>: <span class="code-value">wrap</span>;
+                        <span class="code-property">flex-wrap</span>: <span class="code-value">wrap-reverse</span>;
+                    {% endif %}
+                </div>
+
+                <!-------------------------------
+                Universal Demo Container Handler: handles both single demo containers and multiple demo containers(any)
+                         Sufficient because the data structures follow the standard patterns flat and 2 level nested
+                        Auto-Detection: Automatically detects single vs. multiple demo structures
+                            - [['Demo A'], ['A1', 'A2', 'A3', 'A4', 'A5']]  (single/flat): Detects flat item list and uses all items for the single demo
+                            - [['Demo A', 'Demo B', 'Demo C'], [['A1', 'A2'], ['B1', 'B2', 'B3'], ['C1']]] (multiple/nested): Detects nested item lists and maps each demo to its corresponding item list(uses specific index for each demo)
+                            - [['Demo A', 'Demo B', 'Demo C'], [['A1', 'A2'], ['B1', 'B2', 'B3'], ['C1']]]: Any number of demos at the same nesting level
+                        Flexible Processing: Handles both flat and nested item arrays
+                        Consistent Rendering: Produces uniform output regardless of input format
+                        Error Handling: Safe for different data structures
+
+
+                        Limited with complex or deep nesting, DOESN'T Handle:
+                            - Deep nesting (3+ levels): 
+                                - [['Deep Demo'], [[['Level1', 'Level2'], ['Level3']]]]
+                                    - Results in: Item 1: ['Level1', 'Level2'], Item 2: ['Level3']
+                                    - Instead of flattening to individual items
+                            - Mixed structures (some demos flat, others nested)
+                            - Irregular nesting depths
+                            - Complex nested objects
+                ------------------------------------->
+                {% set demo_names = detail[3][0] %}
+                {% set demo_items = detail[3][1] %}
+                
+                {% for i in range(demo_names | length) %}
+                    {% set demo_name = demo_names[i] %}
+                    {% set current_items = [] %}
+                    
+                    {# Detect if items are nested or flat #}
+                    {% if demo_items[0] is iterable and demo_items[0] is not string %}
+                        {# Nested - use specific index #}
+                        {% set current_items = demo_items[i] %}
+                    {% else %}
+                        {# Single demo - use all items #}
+                        {% set current_items = demo_items %}
+                    {% endif %}
+                    
+                    <div class="demo-container">
+                        <div class="demo-label">{{ demo_name }}</div>
+                        <div class="flex-container wrap-nowrap">
+                            {% for item in current_items %}
+                            <div class="flex-item">{{ item }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+
+                
+
+
+
+                <div class="more-info key-concepts">
+                    <h3>Key Concepts:</h3>
+                    <ul>
+                    {% for concept in detail[4] %}
+                        <li><strong>{{ concept[0] | safe }}</strong> {{ concept[1] }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+
+
+</main>
+
+{% endmacro %}
+
+
